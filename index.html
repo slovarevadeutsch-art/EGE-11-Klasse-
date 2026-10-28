@@ -5,124 +5,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Интерактивный тест по немецкому языку</title>
     <style>
+        /* Базовые настройки страницы */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
-            color: #333;
+            background-color: #ffffff; /* Белый фон, как на скриншоте */
+            color: #2c3e50;
             line-height: 1.6;
             margin: 0;
             padding: 20px;
         }
+        
         .container {
             max-width: 850px;
             margin: 0 auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            padding: 10px;
         }
-        h2 {
-            text-align: center;
-            color: #1a252f;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 15px;
-            margin-bottom: 30px;
-        }
-        h3 {
-            color: #2980b9;
-            margin-top: 0;
-            margin-bottom: 20px;
-            font-size: 22px;
-        }
+
+        /* Скрытие текстов до нажатия */
         .text-section {
             display: none;
         }
         .text-section.active {
             display: block;
-            animation: fadeIn 0.4s ease;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+
+        /* =========================================
+           СТИЛИ ДЛЯ КАЖДОГО ЗАДАНИЯ (КАК НА СКРИНШОТЕ)
+           ========================================= */
         
-        /* Стили для 7 блоков */
-        .block-container {
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px dashed #dcdde1;
+        /* Группирующий контейнер для одного задания (текст + варианты) */
+        .task-group {
+            margin-bottom: 35px; /* Отступ между заданиями */
         }
-        .block-container:last-of-type {
-            border-bottom: none;
-        }
-        .block-label {
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #7f8c8d;
-            margin-bottom: 5px;
-        }
-        .text-block {
-            background-color: #f8f9fa;
-            border-left: 5px solid #3498db;
-            padding: 15px 20px;
-            margin-bottom: 15px;
-            border-radius: 0 8px 8px 0;
+
+        /* Блок с текстом (светло-серый фон, синяя полоса слева) */
+        .text-box {
+            background-color: #f8f9fa; /* Очень светлый серый */
+            border-left: 6px solid #3498db; /* Яркая синяя полоса */
+            padding: 20px 25px;
+            margin-bottom: 20px;
+            border-radius: 4px; /* Легкое скругление */
             font-size: 16px;
+            color: #333;
         }
-        .question-block {
-            padding: 15px;
-            background: #fff;
-            border: 1px solid #e1e8ed;
+
+        /* Блок с самим заданием и вариантами */
+        .question-box {
+            border: 1px solid #e1e8ed; /* Тонкая рамка вокруг вопроса, как на скрине */
             border-radius: 8px;
+            padding: 20px 25px;
+            background-color: #ffffff;
         }
+
+        /* Заголовок "Задание 30" */
         .question-title {
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #2c3e50;
-            font-size: 16px;
+            font-weight: 700;
+            font-size: 18px;
+            color: #2c3e50; /* Темно-синий/серый */
+            margin-bottom: 15px;
+            display: block;
         }
-        .options {
+
+        /* Сетка для вариантов ответов (две колонки) */
+        .options-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px;
+            gap: 12px; /* Расстояние между кнопками */
         }
-        .option {
-            background: #f1f2f6;
-            padding: 12px 15px;
-            border-radius: 6px;
+
+        /* Кнопка варианта ответа */
+        .option-btn {
+            background-color: #f0f2f5; /* Светло-серый фон кнопки */
+            padding: 12px 18px;
+            border-radius: 8px;
             cursor: pointer;
-            transition: all 0.2s;
-            border: 2px solid transparent;
+            font-size: 16px;
+            color: #2c3e50;
             user-select: none;
-            font-size: 15px;
+            transition: background 0.2s, transform 0.1s;
+            border: 2px solid transparent; /* Резерв под рамку для выделения */
         }
-        .option:hover {
-            background: #dfe4ea;
+
+        /* Наведение мышки */
+        .option-btn:hover {
+            background-color: #e2e6ea;
         }
-        .option.selected {
-            background: #ced6e0;
-            font-weight: bold;
-            border-color: #95a5a6;
+
+        /* Выбранный вариант (до проверки) */
+        .option-btn.selected {
+            background-color: #d5dbdb; /* Чуть темнее */
+            border-color: #bdc3c7;
         }
-        .option.correct {
-            background: #2ecc71 !important;
-            color: white;
-            border-color: #27ae60 !important;
+
+        /* Правильный ответ (после проверки) */
+        .option-btn.correct {
+            background-color: #d4edda !important;
+            border-color: #28a745 !important;
+            color: #155724;
         }
-        .option.wrong {
-            background: #e74c3c !important;
-            color: white;
-            border-color: #c0392b !important;
+
+        /* Неправильный ответ (после проверки) */
+        .option-btn.wrong {
+            background-color: #f8d7da !important;
+            border-color: #dc3545 !important;
+            color: #721c24;
         }
-        .option.disabled {
+
+        /* Блокировка кликов */
+        .option-btn.disabled {
             pointer-events: none;
         }
-        .btn {
+
+        /* Кнопки "Проверить" и "Далее" */
+        .btn-main {
             display: block;
             width: 100%;
             padding: 16px;
-            background: #2980b9;
+            background: #3498db;
             color: white;
             border: none;
             border-radius: 8px;
@@ -130,10 +129,11 @@
             font-weight: bold;
             cursor: pointer;
             transition: background 0.3s;
-            margin-top: 25px;
+            margin-top: 30px;
+            text-align: center;
         }
-        .btn:hover {
-            background: #1f618d;
+        .btn-main:hover {
+            background: #2980b9;
         }
         .btn-next {
             background: #27ae60;
@@ -142,6 +142,8 @@
         .btn-next:hover {
             background: #219653;
         }
+
+        /* Баннер с результатом */
         .result-banner {
             display: none;
             text-align: center;
@@ -162,321 +164,313 @@
             color: #2c3e50;
             margin-top: 10px;
         }
+
+        /* Адаптация для телефонов */
         @media (max-width: 600px) {
-            .options { grid-template-columns: 1fr; }
-            .container { padding: 15px; }
+            .options-grid { grid-template-columns: 1fr; }
+            .text-box, .question-box { padding: 15px; }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h2>Тест по немецкому языку</h2>
+    <h2 style="text-align: center; border-bottom: 2px solid #3498db; padding-bottom: 10px;">Тест по немецкому языку</h2>
 
     <!-- ================= ТЕКСТ 1 ================= -->
     <div id="text1" class="text-section active">
-        <h3>Текст 1: Wie ein russischer Erfinder Europa erstrahlen ließ</h3>
+        <h3 style="color: #2980b9; margin-bottom: 20px;">Текст 1: Wie ein russischer Erfinder Europa erstrahlen ließ</h3>
         
-        <!-- БЛОК 1 -->
-        <div class="block-container">
-            <div class="block-label">Блок 1 из 7</div>
-            <div class="text-block">
+        <!-- Задание 30 -->
+        <div class="task-group">
+            <div class="text-box">
                 Pawel Jablotschkow kann mit Recht den Erfindern der ersten elektrischen Beleuchtung <b>[30]</b> ________ werden. Er war es, der ersten elektrischen Lichts in die Straßen Europas und später in russische Städte brachte.
             </div>
-            <div class="question-block" data-correct="2">
-                <div class="question-title">Задание 30</div>
-                <div class="options">
-                    <div class="option" data-i="1">1) zugesagt</div>
-                    <div class="option" data-i="2">2) zugerechnet</div>
-                    <div class="option" data-i="3">3) zugegeben</div>
-                    <div class="option" data-i="4">4) zugestimmt</div>
+            <div class="question-box" data-correct="2">
+                <span class="question-title">Задание 30</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) zugesagt</div>
+                    <div class="option-btn" data-i="2">2) zugerechnet</div>
+                    <div class="option-btn" data-i="3">3) zugegeben</div>
+                    <div class="option-btn" data-i="4">4) zugestimmt</div>
                 </div>
             </div>
         </div>
 
-        <!-- БЛОК 2 -->
-        <div class="block-container">
-            <div class="block-label">Блок 2 из 7</div>
-            <div class="text-block">
+        <!-- Задание 31 -->
+        <div class="task-group">
+            <div class="text-box">
                 Den <b>[31]</b> ________ „Jablotschkowsche Kerzen“ kannte Ende des 19. Jahrhunderts jeder Mensch, der sich für Technik interessierte.
             </div>
-            <div class="question-block" data-correct="1">
-                <div class="question-title">Задание 31</div>
-                <div class="options">
-                    <div class="option" data-i="1">1) Ausdruck</div>
-                    <div class="option" data-i="2">2) Äußerung</div>
-                    <div class="option" data-i="3">3) Sage</div>
-                    <div class="option" data-i="4">4) Spruch</div>
+            <div class="question-box" data-correct="1">
+                <span class="question-title">Задание 31</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Ausdruck</div>
+                    <div class="option-btn" data-i="2">2) Äußerung</div>
+                    <div class="option-btn" data-i="3">3) Sage</div>
+                    <div class="option-btn" data-i="4">4) Spruch</div>
                 </div>
             </div>
         </div>
 
-        <!-- БЛОК 3 -->
-        <div class="block-container">
-            <div class="block-label">Блок 3 из 7</div>
-            <div class="text-block">
+        <!-- Задание 32 -->
+        <div class="task-group">
+            <div class="text-box">
                 Die Erfindung des russischen Wissenschaftlers <b>[32]</b> ________ alle Seine so genannten „Kerzen“ zogen in den ersten zwei Jahren nach ihrer Erfindung in alle großen Städte der Welt ein.
             </div>
-            <div class="question-block" data-correct="4">
-                <div class="question-title">Задание 32</div>
-                <div class="options">
-                    <div class="option" data-i="1">1) berechtigte</div>
-                    <div class="option" data-i="2">2) bedachte</div>
-                    <div class="option" data-i="3">3) befahl</div>
-                    <div class="option" data-i="4">4) betraf</div>
+            <div class="question-box" data-correct="4">
+                <span class="question-title">Задание 32</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) berechtigte</div>
+                    <div class="option-btn" data-i="2">2) bedachte</div>
+                    <div class="option-btn" data-i="3">3) befahl</div>
+                    <div class="option-btn" data-i="4">4) betraf</div>
                 </div>
             </div>
         </div>
 
-        <!-- БЛОК 4 -->
-        <div class="block-container">
-            <div class="block-label">Блок 4 из 7</div>
-            <div class="text-block">
+        <!-- Задание 33 -->
+        <div class="task-group">
+            <div class="text-box">
                 Die erste Version der „Kerze“ brannte etwa eine Stunde lang. Der Wissenschaftler verdoppelte diese Zeit. Während seines Militärdienstes studierte Jablotschkow das Gebiet, das ihn begeisterte – die Elektrizität. Das konservative militärische <b>[33]</b> ________ tolerierte solche Experimente nicht und Jablotschkow wurde Elektroingenieur.
             </div>
-            <div class="question-block" data-correct="3">
-                <div class="question-title">Задание 33</div>
-                <div class="options">
-                    <div class="option" data-i="1">1) Umfeld</div>
-                    <div class="option" data-i="2">2) Umgang</div>
-                    <div class="option" data-i="3">3) Umgebung</div>
-                    <div class="option" data-i="4">4) Umfang</div>
+            <div class="question-box" data-correct="3">
+                <span class="question-title">Задание 33</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Umfeld</div>
+                    <div class="option-btn" data-i="2">2) Umgang</div>
+                    <div class="option-btn" data-i="3">3) Umgebung</div>
+                    <div class="option-btn" data-i="4">4) Umfang</div>
                 </div>
             </div>
         </div>
 
-        <!-- БЛОК 5 -->
-        <div class="block-container">
-            <div class="block-label">Блок 5 из 7</div>
-            <div class="text-block">
+        <!-- Задание 34 -->
+        <div class="task-group">
+            <div class="text-box">
                 In seinem Freund fand er einen Gleichgesinnten und eröffnete eine Werkstatt in Moskau. Die Freunde wollten mit der Herstellung von elektrischen Geräten ein Geschäft <b>[34]</b> ________.
             </div>
-            <div class="question-block" data-correct="2">
-                <div class="question-title">Задание 34</div>
-                <div class="options">
-                    <div class="option" data-i="1">1) treiben</div>
-                    <div class="option" data-i="2">2) betreiben</div>
-                    <div class="option" data-i="3">3) vertreiben</div>
-                    <div class="option" data-i="4">4) antreiben</div>
+            <div class="question-box" data-correct="2">
+                <span class="question-title">Задание 34</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) treiben</div>
+                    <div class="option-btn" data-i="2">2) betreiben</div>
+                    <div class="option-btn" data-i="3">3) vertreiben</div>
+                    <div class="option-btn" data-i="4">4) antreiben</div>
                 </div>
             </div>
         </div>
 
-        <!-- БЛОК 6 -->
-        <div class="block-container">
-            <div class="block-label">Блок 6 из 7</div>
-            <div class="text-block">
+        <!-- Задание 35 -->
+        <div class="task-group">
+            <div class="text-box">
                 Nebenbei setzte Jablotschkow seine Experimente <b>[35]</b> ________. Das Geschäft der beiden Freunde jedoch entwickelte sich schleppend.
             </div>
-            <div class="question-block" data-correct="1">
-                <div class="question-title">Задание 35</div>
-                <div class="options">
-                    <div class="option" data-i="1">1) fort</div>
-                    <div class="option" data-i="2">2) ein</div>
-                    <div class="option" data-i="3">3) an</div>
-                    <div class="option" data-i="4">4) aus</div>
+            <div class="question-box" data-correct="1">
+                <span class="question-title">Задание 35</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) fort</div>
+                    <div class="option-btn" data-i="2">2) ein</div>
+                    <div class="option-btn" data-i="3">3) an</div>
+                    <div class="option-btn" data-i="4">4) aus</div>
                 </div>
             </div>
         </div>
 
-        <!-- БЛОК 7 -->
-        <div class="block-container">
-            <div class="block-label">Блок 7 из 7</div>
-            <div class="text-block">
+        <!-- Задание 36 -->
+        <div class="task-group">
+            <div class="text-box">
                 Der Wissenschaftler war zu sehr mit Experimenten beschäftigt und nicht mit dem Verkauf. Die Werkstatt ging in Konkurs. Um sein Geschäft vor <b>[36]</b> ________ zu retten, versuchte Jablotschkow in Amerika für seine Erfindungen zu werben. Allerdings reichten die Mittel nur für Paris.
             </div>
-            <div class="question-block" data-correct="2">
-                <div class="question-title">Задание 36</div>
-                <div class="options">
-                    <div class="option" data-i="1">1) Plenum</div>
-                    <div class="option" data-i="2">2) Pleite</div>
-                    <div class="option" data-i="3">3) Plateau</div>
-                    <div class="option" data-i="4">4) Platte</div>
+            <div class="question-box" data-correct="2">
+                <span class="question-title">Задание 36</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Plenum</div>
+                    <div class="option-btn" data-i="2">2) Pleite</div>
+                    <div class="option-btn" data-i="3">3) Plateau</div>
+                    <div class="option-btn" data-i="4">4) Platte</div>
                 </div>
             </div>
         </div>
 
         <!-- Кнопки для Текста 1 -->
-        <button class="btn" onclick="checkText('text1')">Проверить ответы Текста 1</button>
+        <button class="btn-main" onclick="checkText('text1')">Проверить ответы Текста 1</button>
         <div class="result-banner" id="res-text1">
             <h4>Результат Текста 1</h4>
             <div class="score-text" id="score-text1"></div>
         </div>
-        <button class="btn btn-next" id="next-text1" onclick="showText('text2')">Перейти к Тексту 2 ➔</button>
+        <button class="btn-main btn-next" id="next-text1" onclick="showText('text2')">Перейти к Тексту 2 ➔</button>
     </div>
 
 
     <!-- ================= ТЕКСТ 2 ================= -->
     <div id="text2" class="text-section">
-        <h3>Текст 2: Ist E-Sport wirklich ein Sport?</h3>
+        <h3 style="color: #2980b9; margin-bottom: 20px;">Текст 2: Ist E-Sport wirklich ein Sport?</h3>
         
-        <!-- БЛОК 1 -->
-        <div class="block-container">
-            <div class="block-label">Блок 1 из 7</div>
-            <div class="text-block">
+        <!-- Задание 30 -->
+        <div class="task-group">
+            <div class="text-box">
                 Habt ihr schon mal was von E-Sport gehört? Viele junge Menschen betreiben diesen Sport mittlerweile als richtigen Beruf. E-Sport soll sogar nach jahrelangen Diskussionen bald als offizielle Sportart <b>[30]</b> ________ werden, die Bundesregierung hat das sogar als Ziel im Koalitionsvertrag festgelegt.
             </div>
-            <div class="question-block" data-correct="3">
-                <div class="question-title">Задание 30</div>
-                <div class="options">
-                    <div class="option" data-i="1">1) etabliert</div>
-                    <div class="option" data-i="2">2) verbunden</div>
-                    <div class="option" data-i="3">3) anerkannt</div>
-                    <div class="option" data-i="4">4) genannt</div>
+            <div class="question-box" data-correct="3">
+                <span class="question-title">Задание 30</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) etabliert</div>
+                    <div class="option-btn" data-i="2">2) verbunden</div>
+                    <div class="option-btn" data-i="3">3) anerkannt</div>
+                    <div class="option-btn" data-i="4">4) genannt</div>
                 </div>
             </div>
         </div>
 
-        <!-- БЛОК 2 -->
-        <div class="block-container">
-            <div class="block-label">Блок 2 из 7</div>
-            <div class="text-block">
+        <!-- Задание 31 -->
+        <div class="task-group">
+            <div class="text-box">
                 FIFA, League of Legends und Starcraft. Von diesen Games hast du bestimmt schon mal gehört oder vielleicht hast du sie selbst schon gespielt. Es gibt aber auch junge Menschen, die diese Spiele professionell über mehrere Stunden am Tag spielen, ob an der Konsole oder am Computer. Das Ganze wird E-Sport genannt und <b>[31]</b> ________ abgekürzt für elektronischen Sport.
             </div>
-            <div class="question-block" data-correct="1">
-                <div class="question-title">Задание 31</div>
-                <div class="options">
-                    <div class="option" data-i="1">1) wird</div>
-                    <div class="option" data-i="2">2) steht</div>
-                    <div class="option" data-i="3">3) wirkt</div>
-                    <div class="option" data-i="4">4) ist</div>
+            <div class="question-box" data-correct="1">
+                <span class="question-title">Задание 31</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) wird</div>
+                    <div class="option-btn" data-i="2">2) steht</div>
+                    <div class="option-btn" data-i="3">3) wirkt</div>
+                    <div class="option-btn" data-i="4">4) ist</div>
                 </div>
             </div>
         </div>
 
-        <!-- БЛОК 3 -->
-        <div class="block-container">
-            <div class="block-label">Блок 3 из 7</div>
-            <div class="text-block">
+        <!-- Задание 32 -->
+        <div class="task-group">
+            <div class="text-box">
                 E-Sport ist in den letzten Jahren so stark gewachsen, dass richtige <b>[32]</b> ________ entstanden sind.
             </div>
-            <div class="question-block" data-correct="4">
-                <div class="question-title">Задание 32</div>
-                <div class="options">
-                    <div class="option" data-i="1">1) Bunde</div>
-                    <div class="option" data-i="2">2) Vereinbarungen</div>
-                    <div class="option" data-i="3">3) Bündnisse</div>
-                    <div class="option" data-i="4">4) Vereine</div>
+            <div class="question-box" data-correct="4">
+                <span class="question-title">Задание 32</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Bunde</div>
+                    <div class="option-btn" data-i="2">2) Vereinbarungen</div>
+                    <div class="option-btn" data-i="3">3) Bündnisse</div>
+                    <div class="option-btn" data-i="4">4) Vereine</div>
                 </div>
             </div>
         </div>
 
-        <!-- БЛОК 4 -->
-        <div class="block-container">
-            <div class="block-label">Блок 4 из 7</div>
-            <div class="text-block">
+        <!-- Задание 33 -->
+        <div class="task-group">
+            <div class="text-box">
                 Die treten dann in großen Turnieren <b>[33]</b> ________ an. Wenn man erfolgreich ist, kann man mehrere Millionen Euro gewinnen.
             </div>
-            <div class="question-block" data-correct="4">
-                <div class="question-title">Задание 33</div>
-                <div class="options">
-                    <div class="option" data-i="1">1) zueinander</div>
-                    <div class="option" data-i="2">2) miteinander</div>
-                    <div class="option" data-i="3">3) nacheinander</div>
-                    <div class="option" data-i="4">4) gegeneinander</div>
+            <div class="question-box" data-correct="4">
+                <span class="question-title">Задание 33</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) zueinander</div>
+                    <div class="option-btn" data-i="2">2) miteinander</div>
+                    <div class="option-btn" data-i="3">3) nacheinander</div>
+                    <div class="option-btn" data-i="4">4) gegeneinander</div>
                 </div>
             </div>
         </div>
 
-        <!-- БЛОК 5 -->
-        <div class="block-container">
-            <div class="block-label">Блок 5 из 7</div>
-            <div class="text-block">
+        <!-- Задание 34 -->
+        <div class="task-group">
+            <div class="text-box">
                 Man muss also nur schnell ein paar Knöpfe drücken und prompt ist man Millionär. So einfach ist das dann doch nicht. Ähnlich wie bei Leistungssportlern, braucht man auch hier viel Talent und Glück. Nur die wenigsten <b>[34]</b> ________ es, als E-Sportler Geld zu verdienen.
             </div>
-            <div class="question-block" data-correct="1">
-                <div class="question-title">Задание 34</div>
-                <div class="options">
-                    <div class="option" data-i="1">1) schaffen</div>
-                    <div class="option" data-i="2">2) machen</div>
-                    <div class="option" data-i="3">3) gelingen</div>
-                    <div class="option" data-i="4">4) klappen</div>
+            <div class="question-box" data-correct="1">
+                <span class="question-title">Задание 34</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) schaffen</div>
+                    <div class="option-btn" data-i="2">2) machen</div>
+                    <div class="option-btn" data-i="3">3) gelingen</div>
+                    <div class="option-btn" data-i="4">4) klappen</div>
                 </div>
             </div>
         </div>
 
-        <!-- БЛОК 6 -->
-        <div class="block-container">
-            <div class="block-label">Блок 6 из 7</div>
-            <div class="text-block">
+        <!-- Задание 35 -->
+        <div class="task-group">
+            <div class="text-box">
                 Sie sind wöchentlich auf vielen verschiedenen Veranstaltungen unterwegs, wenn sie nicht gerade trainieren. Neben den Veranstaltungen kommen zahlreiche Wettbewerbe auf der ganzen Welt hinzu. Der Druck ist <b>[35]</b> ________, weil das Zuschauerinteresse immer größer wird.
             </div>
-            <div class="question-block" data-correct="2">
-                <div class="question-title">Задание 35</div>
-                <div class="options">
-                    <div class="option" data-i="1">1) winzig</div>
-                    <div class="option" data-i="2">2) enorm</div>
-                    <div class="option" data-i="3">3) denkbar</div>
-                    <div class="option" data-i="4">4) gering</div>
+            <div class="question-box" data-correct="2">
+                <span class="question-title">Задание 35</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) winzig</div>
+                    <div class="option-btn" data-i="2">2) enorm</div>
+                    <div class="option-btn" data-i="3">3) denkbar</div>
+                    <div class="option-btn" data-i="4">4) gering</div>
                 </div>
             </div>
         </div>
 
-        <!-- БЛОК 7 -->
-        <div class="block-container">
-            <div class="block-label">Блок 7 из 7</div>
-            <div class="text-block">
+        <!-- Задание 36 -->
+        <div class="task-group">
+            <div class="text-box">
                 Große Turniere werden schon im Fernsehen <b>[36]</b> ________.
             </div>
-            <div class="question-block" data-correct="1">
-                <div class="question-title">Задание 36</div>
-                <div class="options">
-                    <div class="option" data-i="1">1) ausgestrahlt</div>
-                    <div class="option" data-i="2">2) veröffentlicht</div>
-                    <div class="option" data-i="3">3) versandt</div>
-                    <div class="option" data-i="4">4) geführt</div>
+            <div class="question-box" data-correct="1">
+                <span class="question-title">Задание 36</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) ausgestrahlt</div>
+                    <div class="option-btn" data-i="2">2) veröffentlicht</div>
+                    <div class="option-btn" data-i="3">3) versandt</div>
+                    <div class="option-btn" data-i="4">4) geführt</div>
                 </div>
             </div>
         </div>
 
         <!-- Кнопки для Текста 2 -->
-        <button class="btn" onclick="checkText('text2')">Проверить ответы Текста 2</button>
+        <button class="btn-main" onclick="checkText('text2')">Проверить ответы Текста 2</button>
         <div class="result-banner" id="res-text2">
             <h4>Результат Текста 2</h4>
             <div class="score-text" id="score-text2"></div>
         </div>
-        <button class="btn btn-next" id="restart-btn" onclick="location.reload()">Пройти тест заново 🔄</button>
+        <button class="btn-main btn-next" id="restart-btn" onclick="location.reload()">Пройти тест заново 🔄</button>
     </div>
 
 </div>
 
 <script>
     // Логика выбора вариантов
-    document.querySelectorAll('.question-block').forEach(block => {
-        block.querySelectorAll('.option').forEach(option => {
-            option.addEventListener('click', function() {
+    document.querySelectorAll('.question-box').forEach(box => {
+        box.querySelectorAll('.option-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
                 if (this.classList.contains('disabled')) return;
-                block.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+                // Убираем выделение с других кнопок в этом же вопросе
+                box.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+                // Выделяем нажатую
                 this.classList.add('selected');
             });
         });
     });
 
-    // Функция проверки текста
+    // Функция проверки
     function checkText(textId) {
         const container = document.getElementById(textId);
         let score = 0;
         let total = 0;
         let allAnswered = true;
 
-        container.querySelectorAll('.question-block').forEach(block => {
+        container.querySelectorAll('.question-box').forEach(box => {
             total++;
-            const correct = block.getAttribute('data-correct');
-            const selected = block.querySelector('.option.selected');
+            const correct = box.getAttribute('data-correct');
+            const selected = box.querySelector('.option-btn.selected');
 
             if (!selected) {
                 allAnswered = false;
                 return; 
             }
 
-            block.querySelectorAll('.option').forEach(opt => opt.classList.add('disabled'));
+            // Блокируем клики
+            box.querySelectorAll('.option-btn').forEach(b => b.classList.add('disabled'));
 
             if (selected.getAttribute('data-i') === correct) {
                 selected.classList.add('correct');
                 score++;
             } else {
                 selected.classList.add('wrong');
-                block.querySelector(`.option[data-i="${correct}"]`).classList.add('correct');
+                // Подсвечиваем правильный ответ
+                box.querySelector(`.option-btn[data-i="${correct}"]`).classList.add('correct');
             }
         });
 
@@ -485,21 +479,21 @@
             return;
         }
 
-        const resBanner = document.getElementById('res-' + textId);
-        const scoreDisplay = document.getElementById('score-' + textId);
-        scoreDisplay.textContent = score + " / " + total;
-        resBanner.style.display = 'block';
+        // Показываем результат
+        document.getElementById('res-' + textId).style.display = 'block';
+        document.getElementById('score-' + textId).textContent = score + " / " + total;
 
+        // Переключаем кнопки
         if (textId === 'text1') {
             document.getElementById('next-text1').style.display = 'block';
-            container.querySelector('.btn').style.display = 'none';
+            container.querySelector('.btn-main').style.display = 'none';
         } else {
             document.getElementById('restart-btn').style.display = 'block';
-            container.querySelector('.btn').style.display = 'none';
+            container.querySelector('.btn-main').style.display = 'none';
         }
     }
 
-    // Функция переключения текстов
+    // Переключение текстов
     function showText(id) {
         document.querySelectorAll('.text-section').forEach(sec => sec.classList.remove('active'));
         document.getElementById(id).classList.add('active');
