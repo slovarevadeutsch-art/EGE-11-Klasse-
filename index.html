@@ -68,28 +68,21 @@
         .option-btn:hover {
             background-color: #e2e6ea;
         }
-        
-        /* Выбранный вариант - теперь СИНИЙ */
         .option-btn.selected {
-            background-color: #3498db !important; /* Синий цвет */
-            color: #ffffff !important; /* Белый текст */
-            border-color: #2980b9 !important; /* Темно-синяя рамка */
+            background-color: #3498db !important;
+            color: #ffffff !important;
+            border-color: #2980b9 !important;
         }
-
-        /* Правильный ответ - ЗЕЛЕНЫЙ */
         .option-btn.correct {
             background-color: #d4edda !important;
             border-color: #28a745 !important;
             color: #155724 !important;
         }
-        
-        /* Неправильный ответ - КРАСНЫЙ */
         .option-btn.wrong {
             background-color: #f8d7da !important;
             border-color: #dc3545 !important;
             color: #721c24 !important;
         }
-        
         .option-btn.disabled {
             pointer-events: none;
         }
@@ -427,7 +420,6 @@
         <div class="result-banner" id="res-text3"><h4>Результат Текста 3</h4><div class="score-text" id="score-text3"></div></div>
         <button class="btn-main btn-next" id="next-text3" onclick="showText('text4')">Перейти к Тексту 4 ➔</button>
     </div>
-
     <!-- ================= ТЕКСТ 4 ================= -->
     <div id="text4" class="text-section">
         <h3 style="color: #2980b9; margin-bottom: 20px;">Текст 4: Informieren – Orientieren – Ausprobieren</h3>
@@ -609,15 +601,944 @@
                 </div>
             </div>
         </div>
-
         <button class="btn-main" onclick="checkText('text5')">Проверить ответы Текста 5</button>
         <div class="result-banner" id="res-text5"><h4>Результат Текста 5</h4><div class="score-text" id="score-text5"></div></div>
+        <button class="btn-main btn-next" id="next-text5" onclick="showText('text6')">Перейти к Тексту 6 ➔</button>
+    </div>
+
+    <!-- ================= ТЕКСТ 6 ================= -->
+    <div id="text6" class="text-section">
+        <h3 style="color: #2980b9; margin-bottom: 20px;">Текст 6: Haustiere werden immer dicker</h3>
+        
+        <div class="task-group">
+            <div class="text-box">Ein Stück Wurst hier, ein Leckerli da. Viele Tierbesitzer bieten Futter im Überfluss an. Die Folgen: <b>[32]</b> ________ und Krankheiten.</div>
+            <div class="question-box" data-correct="2">
+                <span class="question-title">Задание 32</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Untergewicht</div>
+                    <div class="option-btn" data-i="2">2) Übergewicht</div>
+                    <div class="option-btn" data-i="3">3) Unterdruck</div>
+                    <div class="option-btn" data-i="4">4) Überdruck</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Wenn Ihr Labrador oder Mops wie eine Tonne <b>[33]</b> ________, dann sollten Sie es sich eingestehen: Das Tier ist zu dick.</div>
+            <div class="question-box" data-correct="1">
+                <span class="question-title">Задание 33</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) aussieht</div>
+                    <div class="option-btn" data-i="2">2) sieht</div>
+                    <div class="option-btn" data-i="3">3) einsieht</div>
+                    <div class="option-btn" data-i="4">4) ansieht</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Es gehört zu den 40 bis 60 Prozent der übergewichtigen Haustiere in Deutschland. Tendenz steigend. Nicht nur Herrchen und Frauchen werden immer dicker, auch ihre treuen Begleiter leiden immer häufiger <b>[34]</b> ________ Übergewicht.</div>
+            <div class="question-box" data-correct="3">
+                <span class="question-title">Задание 34</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) von</div>
+                    <div class="option-btn" data-i="2">2) um</div>
+                    <div class="option-btn" data-i="3">3) an</div>
+                    <div class="option-btn" data-i="4">4) für</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Die zusätzlichen Pfunde machen das Leben des Tieres schwerer, obwohl der <b>[35]</b> ________ für das Übergewicht des Haustieres ein seltsamer Ausdruck von Liebe ist.</div>
+            <div class="question-box" data-correct="2">
+                <span class="question-title">Задание 35</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Hintergrund</div>
+                    <div class="option-btn" data-i="2">2) Vordergrund</div>
+                    <div class="option-btn" data-i="3">3) Hauptgrund</div>
+                    <div class="option-btn" data-i="4">4) Untergrund</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">„Das Tier zu füttern ist ein menschliches <b>[36]</b> ________“, sagt Kathrin Meier, Tierärztin.</div>
+            <div class="question-box" data-correct="1">
+                <span class="question-title">Задание 36</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Bedürfnis</div>
+                    <div class="option-btn" data-i="2">2) Ereignis</div>
+                    <div class="option-btn" data-i="3">3) Finsternis</div>
+                    <div class="option-btn" data-i="4">4) Hindernis</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">„Viele Tierbesitzer drücken darüber ihre Zuneigung aus und wollen deshalb gar nicht weniger füttern.“ Tierisches Übergewicht ist, wie beim Menschen auch, eine Wohlstandskrankheit und ein <b>[37]</b> ________, das immer größer wird.</div>
+            <div class="question-box" data-correct="4">
+                <span class="question-title">Задание 37</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Fest</div>
+                    <div class="option-btn" data-i="2">2) System</div>
+                    <div class="option-btn" data-i="3">3) Thema</div>
+                    <div class="option-btn" data-i="4">4) Problem</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Auch die Folgen sind die gleichen. Viele Tiere entwickeln Diabetes und Herz-Kreislauf-Probleme nehmen zu. „Die Diät des Haustieres muss immer in den Tagesablauf von Herrchen und Frauchen passen“, sagt Meier. „Viele Tiere haben zusätzliche Beschwerden, wie Allergien, die <b>[38]</b> ________ der Auswahl der Nahrung berücksichtigt werden müssen. Grundsätzlich ist es auch hier wie beim Menschen: Eine Kombination aus Bewegung und gesundem Futter bringt den Vierbeiner wieder in Form.“</div>
+            <div class="question-box" data-correct="3">
+                <span class="question-title">Задание 38</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) mit</div>
+                    <div class="option-btn" data-i="2">2) nach</div>
+                    <div class="option-btn" data-i="3">3) bei</div>
+                    <div class="option-btn" data-i="4">4) in</div>
+                </div>
+            </div>
+        </div>
+        <button class="btn-main" onclick="checkText('text6')">Проверить ответы Текста 6</button>
+        <div class="result-banner" id="res-text6"><h4>Результат Текста 6</h4><div class="score-text" id="score-text6"></div></div>
+        <button class="btn-main btn-next" id="next-text6" onclick="showText('text7')">Перейти к Тексту 7 ➔</button>
+    </div>
+
+    <!-- ================= ТЕКСТ 7 ================= -->
+    <div id="text7" class="text-section">
+        <h3 style="color: #2980b9; margin-bottom: 20px;">Текст 7: Fernsehen war gestern — heute Internet</h3>
+        
+        <div class="task-group">
+            <div class="text-box">Mehr als zwei Drittel aller Menschen über 14 Jahren sind in Deutschland in sozialen Netzwerken aktiv. Vor allem Facebook ist beliebt. Facebook wurde 2004 von dem Harvard-Studenten Marc Zuckerberg <b>[32]</b> ________. Bald waren Studenten aller Universitäten der USA auf Facebook. Danach kamen andere Hochschulen und Schulen der Welt hinzu.</div>
+            <div class="question-box" data-correct="3">
+                <span class="question-title">Задание 32</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) gestellt</div>
+                    <div class="option-btn" data-i="2">2) gemeint</div>
+                    <div class="option-btn" data-i="3">3) gegründet</div>
+                    <div class="option-btn" data-i="4">4) genommen</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Facebook und Twitter sind mittlerweile mehr <b>[33]</b> ________ nur soziale Netzwerke.</div>
+            <div class="question-box" data-correct="2">
+                <span class="question-title">Задание 33</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) wie</div>
+                    <div class="option-btn" data-i="2">2) als</div>
+                    <div class="option-btn" data-i="3">3) gegen</div>
+                    <div class="option-btn" data-i="4">4) an</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Wer online ein Buch <b>[34]</b> ________ oder einen Artikel liest, kann dies sofort mit seinen virtuellen Freunden teilen.</div>
+            <div class="question-box" data-correct="4">
+                <span class="question-title">Задание 34</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) erstellt</div>
+                    <div class="option-btn" data-i="2">2) verstellt</div>
+                    <div class="option-btn" data-i="3">3) entgegengestellt</div>
+                    <div class="option-btn" data-i="4">4) bestellt</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Er klickt einfach auf „Gefällt mir“. Viele TV-Sendungen <b>[35]</b> ________ Facebook für eigene Fanseiten.</div>
+            <div class="question-box" data-correct="2">
+                <span class="question-title">Задание 35</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) kaufen</div>
+                    <div class="option-btn" data-i="2">2) nutzen</div>
+                    <div class="option-btn" data-i="3">3) tauschen</div>
+                    <div class="option-btn" data-i="4">4) nehmen</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Dort können Nutzer unter anderem Kommentare abgeben und <b>[36]</b> ________ an die Redaktion stellen.</div>
+            <div class="question-box" data-correct="4">
+                <span class="question-title">Задание 36</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Antworten</div>
+                    <div class="option-btn" data-i="2">2) Anträge</div>
+                    <div class="option-btn" data-i="3">3) Beschwerden</div>
+                    <div class="option-btn" data-i="4">4) Fragen</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Oft finden über Facebook auch Gewinnspiele statt. 24 Prozent der Internetnutzer in Deutschland surfen und sehen fern zugleich — und das täglich. Über Twitter oder Facebook kommentieren sie, was sie gerade sehen, oder tauschen sich mit anderen <b>[37]</b> ________ aus.</div>
+            <div class="question-box" data-correct="1">
+                <span class="question-title">Задание 37</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) darüber</div>
+                    <div class="option-btn" data-i="2">2) darauf</div>
+                    <div class="option-btn" data-i="3">3) daran</div>
+                    <div class="option-btn" data-i="4">4) darum</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Die sozialen Netzwerke sind aber kein geschützter Raum. Unter den Milliarden Posts, die dort jeden Tag veröffentlicht werden, sind auch aggressive Videos, Fotos und Kommentare. Die Kinder sollen diese Gefahren verstehen <b>[38]</b> ________ die sozialen Netzwerke vorsichtiger nutzen.</div>
+            <div class="question-box" data-correct="2">
+                <span class="question-title">Задание 38</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) aber</div>
+                    <div class="option-btn" data-i="2">2) und</div>
+                    <div class="option-btn" data-i="3">3) denn</div>
+                    <div class="option-btn" data-i="4">4) statt</div>
+                </div>
+            </div>
+        </div>
+        <button class="btn-main" onclick="checkText('text7')">Проверить ответы Текста 7</button>
+        <div class="result-banner" id="res-text7"><h4>Результат Текста 7</h4><div class="score-text" id="score-text7"></div></div>
+        <button class="btn-main btn-next" id="next-text7" onclick="showText('text8')">Перейти к Тексту 8 ➔</button>
+    </div>
+
+    <!-- ================= ТЕКСТ 8 ================= -->
+    <div id="text8" class="text-section">
+        <h3 style="color: #2980b9; margin-bottom: 20px;">Текст 8: Karl May</h3>
+        
+        <div class="task-group">
+            <div class="text-box">Wahrscheinlich ist Karl May der erfolgreichste deutschsprachige Autor. Karl May war ein Schriftsteller, der im Jahr 1842 geboren wurde und den <b>[32]</b> ________ seiner Berühmtheit um die Jahrhundertwende erreichte.</div>
+            <div class="question-box" data-correct="4">
+                <span class="question-title">Задание 32</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Punkt</div>
+                    <div class="option-btn" data-i="2">2) Wendepunkt</div>
+                    <div class="option-btn" data-i="3">3) Anfangspunkt</div>
+                    <div class="option-btn" data-i="4">4) Höhepunkt</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Vor einem Jahrhundert kannte jedes Kind Karl May. Nicht nur Kinder lasen mit <b>[33]</b> ________ die spannenden Abenteuerromane, die sie in die Prärien Amerikas und in die Wüsten des Orients entführten.</div>
+            <div class="question-box" data-correct="2">
+                <span class="question-title">Задание 33</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Enttäuschung</div>
+                    <div class="option-btn" data-i="2">2) Begeisterung</div>
+                    <div class="option-btn" data-i="3">3) Langeweile</div>
+                    <div class="option-btn" data-i="4">4) Desinteresse</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Heute lesen sicher nicht mehr so viele Kinder und Jugendliche diesen Autor, aber seiner Bekanntheit tut dies keinen Abbruch. Die Bücher Karl Mays sprühen nur so vor Fantasie, sie sind auch spannend zu lesen. Er schrieb <b>[34]</b> ________ Länder, die er nie gesehen hatte und schilderte sie so treffend, dass der Leser glaubte, selbst nach Amerika oder in den Orient zu reisen.</div>
+            <div class="question-box" data-correct="2">
+                <span class="question-title">Задание 34</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) von</div>
+                    <div class="option-btn" data-i="2">2) über</div>
+                    <div class="option-btn" data-i="3">3) auf</div>
+                    <div class="option-btn" data-i="4">4) an</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Karl May war so fantasievoll, dass er irgendwie auch selbst <b>[35]</b> ________, er ist einer seiner Helden.</div>
+            <div class="question-box" data-correct="1">
+                <span class="question-title">Задание 35</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) glaubte</div>
+                    <div class="option-btn" data-i="2">2) träumte</div>
+                    <div class="option-btn" data-i="3">3) schrieb</div>
+                    <div class="option-btn" data-i="4">4) las</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">So <b>[36]</b> ________ er viele Lügengeschichten, um das immer wieder unter Beweis zu stellen.</div>
+            <div class="question-box" data-correct="3">
+                <span class="question-title">Задание 36</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) konnte</div>
+                    <div class="option-btn" data-i="2">2) entdeckte</div>
+                    <div class="option-btn" data-i="3">3) erfand</div>
+                    <div class="option-btn" data-i="4">4) kaufte</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Karl May selbst war übrigens sehr religiös, er schätzte den Frieden und setzte sich für die Verständigung <b>[37]</b> ________ den Völkern ein.</div>
+            <div class="question-box" data-correct="4">
+                <span class="question-title">Задание 37</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) aus</div>
+                    <div class="option-btn" data-i="2">2) mit</div>
+                    <div class="option-btn" data-i="3">3) über</div>
+                    <div class="option-btn" data-i="4">4) zwischen</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Seine Helden töteten nie aus Freude, sondern nur, wenn sie sich selbst retten mussten. Die Literaturwissenschaft, also die Leute, die über die Qualität von Literatur entscheiden, schätzen Karl May nicht so sehr. Doch sein Talent, Menschen jeden <b>[38]</b> ________ in eine Welt der Fantasie für Stunden zu entführen, war einfach großartig und eine Leistung, die ihresgleichen sucht. Deshalb wollen wir Karl May auch zur Weltliteratur zählen. Seine Helden haben es sich verdient.</div>
+            <div class="question-box" data-correct="2">
+                <span class="question-title">Задание 38</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Generation</div>
+                    <div class="option-btn" data-i="2">2) Alters</div>
+                    <div class="option-btn" data-i="3">3) Herkunft</div>
+                    <div class="option-btn" data-i="4">4) Nationalität</div>
+                </div>
+            </div>
+        </div>
+        <button class="btn-main" onclick="checkText('text8')">Проверить ответы Текста 8</button>
+        <div class="result-banner" id="res-text8"><h4>Результат Текста 8</h4><div class="score-text" id="score-text8"></div></div>
+        <button class="btn-main btn-next" id="next-text8" onclick="showText('text9')">Перейти к Тексту 9 ➔</button>
+    </div>
+
+    <!-- ================= ТЕКСТ 9 ================= -->
+    <div id="text9" class="text-section">
+        <h3 style="color: #2980b9; margin-bottom: 20px;">Текст 9: Deutsches Fernsehmuseum eröffnet</h3>
+        
+        <div class="task-group">
+            <div class="text-box">Am 1. Juni eröffnet in Berlin das Deutsche Fernsehmuseum. Auf rund 1200 Quadratmetern soll hier die 53-jährige Geschichte des Fernsehens in Deutschland <b>[32]</b> ________ werden. Das Fernsehmuseum kümmert sich weniger um die Technik als um das Programm der vergangenen Jahrzehnte.</div>
+            <div class="question-box" data-correct="4">
+                <span class="question-title">Задание 32</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) bestellt</div>
+                    <div class="option-btn" data-i="2">2) gestellt</div>
+                    <div class="option-btn" data-i="3">3) entgegengestellt</div>
+                    <div class="option-btn" data-i="4">4) dargestellt</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Weil es im Fernsehmuseum um Fernsehen geht, haben die Macher der Ausstellung eine Programmgalerie angelegt. Der <b>[33]</b> ________ kann hier, entspannt auf großen Sofas zurückgelehnt, aus momentan 500 Produktionen auswählen und sie in voller Länge anschauen.</div>
+            <div class="question-box" data-correct="2">
+                <span class="question-title">Задание 33</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Mitarbeiter</div>
+                    <div class="option-btn" data-i="2">2) Besucher</div>
+                    <div class="option-btn" data-i="3">3) Schauspieler</div>
+                    <div class="option-btn" data-i="4">4) Zuschauer</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Eine Datenbank liefert Informationen zu Regisseur, Schauspieler und Ausstrahlung. Im Zeitunnel erfährt man alles Wissenswerte <b>[34]</b> ________ die Entwicklung des Mediums Fernsehen.</div>
+            <div class="question-box" data-correct="3">
+                <span class="question-title">Задание 34</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) von</div>
+                    <div class="option-btn" data-i="2">2) zum</div>
+                    <div class="option-btn" data-i="3">3) über</div>
+                    <div class="option-btn" data-i="4">4) an</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Auf Monitoren ist zu sehen, was heute das Wesen des Fernsehens ist: Die Live-Berichterstattung. Gezeigt wird unter <b>[35]</b> ________ die Krönung von Elisabeth II., die Rede John F. Kennedys vor dem Schöneberger Rathaus in Berlin und die Mondlandung.</div>
+            <div class="question-box" data-correct="3">
+                <span class="question-title">Задание 35</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) vollem</div>
+                    <div class="option-btn" data-i="2">2) allem</div>
+                    <div class="option-btn" data-i="3">3) anderem</div>
+                    <div class="option-btn" data-i="4">4) manchem</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Alle Momente, in <b>[36]</b> ________ das Fernsehen Millionen Menschen die Möglichkeit gab, ein Ereignis fast so zu erleben, als wären sie dabei gewesen.</div>
+            <div class="question-box" data-correct="2">
+                <span class="question-title">Задание 36</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) der</div>
+                    <div class="option-btn" data-i="2">2) denen</div>
+                    <div class="option-btn" data-i="3">3) dessen</div>
+                    <div class="option-btn" data-i="4">4) den</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Der Spiegelsaal lädt den Besucher zu einer 30-minütigen <b>[37]</b> ________ durch die deutsche Fernsehgeschichte ein.</div>
+            <div class="question-box" data-correct="1">
+                <span class="question-title">Задание 37</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Reise</div>
+                    <div class="option-btn" data-i="2">2) Vorstellung</div>
+                    <div class="option-btn" data-i="3">3) Fantasie</div>
+                    <div class="option-btn" data-i="4">4) Werbung</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Für die Eltern wird es wie eine Zeitreise in Jugend sein, ihre Kinder werden sich <b>[38]</b> ________ so manche Show wundern. Mit dem Fernsehmuseum ist das Filmhaus am Potsdamer Platz ein richtigtgehendes Mekka für Film- und Fernsehfreunde geworden.</div>
+            <div class="question-box" data-correct="4">
+                <span class="question-title">Задание 38</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) auf</div>
+                    <div class="option-btn" data-i="2">2) für</div>
+                    <div class="option-btn" data-i="3">3) von</div>
+                    <div class="option-btn" data-i="4">4) über</div>
+                </div>
+            </div>
+        </div>
+        <button class="btn-main" onclick="checkText('text9')">Проверить ответы Текста 9</button>
+        <div class="result-banner" id="res-text9"><h4>Результат Текста 9</h4><div class="score-text" id="score-text9"></div></div>
+        <button class="btn-main btn-next" id="next-text9" onclick="showText('text10')">Перейти к Тексту 10 ➔</button>
+    </div>
+
+    <!-- ================= ТЕКСТ 10 ================= -->
+    <div id="text10" class="text-section">
+        <h3 style="color: #2980b9; margin-bottom: 20px;">Текст 10: Schulnoten</h3>
+        
+        <div class="task-group">
+            <div class="text-box">An den meisten staatlichen Schulen in Deutschland gibt es Schulnoten. In der Regel wird die Leistung von Schülern mit den Ziffern Eins (sehr gut) <b>[32]</b> ________ Sechs (ungenügend) benotet. Schulnoten können aber auch durch schriftliche Bewertungen ergänzt oder ganz ersetzt werden. Wie und ab welcher Klasse ein Kind Noten bekommt, hängt <b>[33]</b> ________ ab, in welchem Bundesland es zur Schule geht. Beispielsweise können Schulen in Schleswig-Holstein und Baden-Württemberg bis zur 8. Klasse ganz auf Schulnoten verzichten.</div>
+            <div class="question-box" data-correct="1">
+                <span class="question-title">Задание 32</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) bis</div>
+                    <div class="option-btn" data-i="2">2) auf</div>
+                    <div class="option-btn" data-i="3">3) gegen</div>
+                    <div class="option-btn" data-i="4">4) zu</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">An den meisten staatlichen Schulen in Deutschland gibt es Schulnoten. In der Regel wird die Leistung von Schülern mit den Ziffern Eins (sehr gut) <b>[32]</b> ________ Sechs (ungenügend) benotet. Schulnoten können aber auch durch schriftliche Bewertungen ergänzt oder ganz ersetzt werden. Wie und ab welcher Klasse ein Kind Noten bekommt, hängt <b>[33]</b> ________ ab, in welchem Bundesland es zur Schule geht. Beispielsweise können Schulen in Schleswig-Holstein und Baden-Württemberg bis zur 8. Klasse ganz auf Schulnoten verzichten.</div>
+            <div class="question-box" data-correct="2">
+                <span class="question-title">Задание 33</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) darauf</div>
+                    <div class="option-btn" data-i="2">2) daran</div>
+                    <div class="option-btn" data-i="3">3) damit</div>
+                    <div class="option-btn" data-i="4">4) davon</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Auch bestimmte Schulformen wie zum Beispiel Waldorfschulen verzichten in der Unter- und Mittelstufe auf Noten. Irgendwann bekommt dann aber doch jeder Schüler in Deutschland ein Notenzeugnis, denn ohne Note gibt es keinen <b>[34]</b> ________.</div>
+            <div class="question-box" data-correct="2">
+                <span class="question-title">Задание 34</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Anschluss</div>
+                    <div class="option-btn" data-i="2">2) Abschluss</div>
+                    <div class="option-btn" data-i="3">3) Beschluss</div>
+                    <div class="option-btn" data-i="4">4) Entschluss</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">In Deutschland wird schon seit vielen Jahren über den Sinn von Schulnoten <b>[35]</b> ________. Gegner der Schulnoten sagen zum Beispiel, <b>[36]</b> ________ eine Note nicht verrät, was ein Schüler hätte besser machen können. Und sie zweifeln daran, dass die Notenvergabe immer <b>[37]</b> ________ ist.</div>
+            <div class="question-box" data-correct="1">
+                <span class="question-title">Задание 35</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) gestritten</div>
+                    <div class="option-btn" data-i="2">2) entschieden</div>
+                    <div class="option-btn" data-i="3">3) erfahren</div>
+                    <div class="option-btn" data-i="4">4) verglichen</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">In Deutschland wird schon seit vielen Jahren über den Sinn von Schulnoten <b>[35]</b> ________. Gegner der Schulnoten sagen zum Beispiel, <b>[36]</b> ________ eine Note nicht verrät, was ein Schüler hätte besser machen können. Und sie zweifeln daran, dass die Notenvergabe immer <b>[37]</b> ________ ist.</div>
+            <div class="question-box" data-correct="2">
+                <span class="question-title">Задание 36</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) obwohl</div>
+                    <div class="option-btn" data-i="2">2) weil</div>
+                    <div class="option-btn" data-i="3">3) dass</div>
+                    <div class="option-btn" data-i="4">4) wie</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">In Deutschland wird schon seit vielen Jahren über den Sinn von Schulnoten <b>[35]</b> ________. Gegner der Schulnoten sagen zum Beispiel, <b>[36]</b> ________ eine Note nicht verrät, was ein Schüler hätte besser machen können. Und sie zweifeln daran, dass die Notenvergabe immer <b>[37]</b> ________ ist.</div>
+            <div class="question-box" data-correct="3">
+                <span class="question-title">Задание 37</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) gegenteilig</div>
+                    <div class="option-btn" data-i="2">2) geehrt</div>
+                    <div class="option-btn" data-i="3">3) gerecht</div>
+                    <div class="option-btn" data-i="4">4) gestrig</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Befürworter halten dagegen, dass sich Schulnoten gut miteinander vergleichen lassen und zum Lernen motivieren. Immer mehr Schulen kombinieren mittlerweile Schulnoten mit schriftlichen <b>[38]</b> ________. Zusätzlich zum Zeugnis bekommen die Schüler dann eine Anlage. Darin steht dann geschrieben, wie gut sie sich am Unterricht beteiligen, in welchen Bereichen sie sich noch verbessern können und wie sie sich gegenüber ihren Mitschülern und Lehrern verhalten haben.</div>
+            <div class="question-box" data-correct="1">
+                <span class="question-title">Задание 38</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Beurteilungen</div>
+                    <div class="option-btn" data-i="2">2) Gedanken</div>
+                    <div class="option-btn" data-i="3">3) Entscheidungen</div>
+                    <div class="option-btn" data-i="4">4) Anwendungen</div>
+                </div>
+            </div>
+        </div>
+        <button class="btn-main" onclick="checkText('text10')">Проверить ответы Текста 10</button>
+        <div class="result-banner" id="res-text10"><h4>Результат Текста 10</h4><div class="score-text" id="score-text10"></div></div>
+        <button class="btn-main btn-next" id="next-text10" onclick="showText('text11')">Перейти к Тексту 11 ➔</button>
+    </div>
+    <!-- ================= ТЕКСТ 11 ================= -->
+    <div id="text11" class="text-section">
+        <h3 style="color: #2980b9; margin-bottom: 20px;">Текст 11: Körpersprache</h3>
+        
+        <div class="task-group">
+            <div class="text-box">Der Körper ist niemals stumm. Wenn Menschen zusammenkommen, reden sie miteinander — <b>[32]</b> ________ wenn sie nicht sprechen.</div>
+            <div class="question-box" data-correct="4">
+                <span class="question-title">Задание 32</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) überhaupt</div>
+                    <div class="option-btn" data-i="2">2) schon</div>
+                    <div class="option-btn" data-i="3">3) immer</div>
+                    <div class="option-btn" data-i="4">4) sogar</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Mimik, Gestik, Haltung und Bewegung, die räumliche Beziehung, Berührungen und die Kleidung sind wichtige Mittel der Kommunikation. Es ist die älteste Form der zwischenmenschlichen <b>[33]</b> ________.</div>
+            <div class="question-box" data-correct="3">
+                <span class="question-title">Задание 33</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Entschuldigung</div>
+                    <div class="option-btn" data-i="2">2) Belastung</div>
+                    <div class="option-btn" data-i="3">3) Verständigung</div>
+                    <div class="option-btn" data-i="4">4) Weigerung</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Auf diese Weise klären wir untereinander, <b>[34]</b> ________ wir uns sympathisch sind.</div>
+            <div class="question-box" data-correct="1">
+                <span class="question-title">Задание 34</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) ob</div>
+                    <div class="option-btn" data-i="2">2) wie</div>
+                    <div class="option-btn" data-i="3">3) wozu</div>
+                    <div class="option-btn" data-i="4">4) weil</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Der Körper verrät unsere wirklichen <b>[35]</b> ________, wer wir sind und was wir eigentlich wollen.</div>
+            <div class="question-box" data-correct="2">
+                <span class="question-title">Задание 35</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Vorurteile</div>
+                    <div class="option-btn" data-i="2">2) Vorstellungen</div>
+                    <div class="option-btn" data-i="3">3) Gefühle</div>
+                    <div class="option-btn" data-i="4">4) Probleme</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Solche Botschaften sind oft unbewusst und gerade deshalb so machtvoll. Ohne Körpersprache sind die täglichen sozialen Beziehungen gar nicht denkbar. Wissenschaftler haben <b>[36]</b> ________, dass 95 Prozent des ersten Eindrucks von einem Menschen von Aussehen, Kleidung, Haltung, Gestik und Mimik, Sprechgeschwindigkeit, Stimmelage, Betonung und Dialekt bestimmt werden und nur 5 Prozent von dem, was jemand sagt.</div>
+            <div class="question-box" data-correct="4">
+                <span class="question-title">Задание 36</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) hervorgerufen</div>
+                    <div class="option-btn" data-i="2">2) entgegengenommen</div>
+                    <div class="option-btn" data-i="3">3) festgenommen</div>
+                    <div class="option-btn" data-i="4">4) herausgefunden</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Und die Einschätzung der Person geschieht in weniger <b>[37]</b> ________ einer Sekunde.</div>
+            <div class="question-box" data-correct="3">
+                <span class="question-title">Задание 37</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) wie</div>
+                    <div class="option-btn" data-i="2">2) von</div>
+                    <div class="option-btn" data-i="3">3) als</div>
+                    <div class="option-btn" data-i="4">4) zu</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Weil wir das körperliche Verhalten schwerer kontrollieren und beherrschen können als die verbalen Aussagen, gilt die Körpersprache als wahrer und echter. Aber lauern da nicht viele Missverständnisse? Stimmt unser Eindruck? Sind unsere Botschaften eindeutig und werden wir verstanden? Die Wissenschaft geht <b>[38]</b> ________ aus, dass bestimmte Basis-Gefühle wie Angst, Furcht, Glück, Trauer, Überraschung und Abscheu bei allen Menschen bestimmte nonverbale Ausdrucksformen hervorrufen.</div>
+            <div class="question-box" data-correct="4">
+                <span class="question-title">Задание 38</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) daran</div>
+                    <div class="option-btn" data-i="2">2) davon</div>
+                    <div class="option-btn" data-i="3">3) darauf</div>
+                    <div class="option-btn" data-i="4">4) daraus</div>
+                </div>
+            </div>
+        </div>
+        <button class="btn-main" onclick="checkText('text11')">Проверить ответы Текста 11</button>
+        <div class="result-banner" id="res-text11"><h4>Результат Текста 11</h4><div class="score-text" id="score-text11"></div></div>
+        <button class="btn-main btn-next" id="next-text11" onclick="showText('text12')">Перейти к Тексту 12 ➔</button>
+    </div>
+
+    <!-- ================= ТЕКСТ 12 ================= -->
+    <div id="text12" class="text-section">
+        <h3 style="color: #2980b9; margin-bottom: 20px;">Текст 12: Als die Araber nach Amerika kamen</h3>
+        
+        <div class="task-group">
+            <div class="text-box">Die rätselhafte Karte eines türkischen Admirals wirft neues Licht auf das vergessene Wissen der Araber: Amerika kannten sie wohl, bevor Christoph Kolumbus dort landete. Karten führen nicht nur zu Schätzen, sie sind es selbst, denn sie bargen lange Geheimwissen. Für uns ist schwer <b>[32]</b> ________, welche Macht Karten einst hatten.</div>
+            <div class="question-box" data-correct="4">
+                <span class="question-title">Задание 32</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) unvorstellbar</div>
+                    <div class="option-btn" data-i="2">2) ersetzbar</div>
+                    <div class="option-btn" data-i="3">3) ertragbar</div>
+                    <div class="option-btn" data-i="4">4) vorstellbar</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Die längste Zeit unserer Geschichte aber hatten Menschen keine konkrete <b>[33]</b> ________ über ihre Erde. Erst im Zeitalter der Entdeckungen gelangten sie weit über Europas hinaus und begannen die geografischen Kenntnisse zu sammeln, so glaubte man bisher.</div>
+            <div class="question-box" data-correct="3">
+                <span class="question-title">Задание 33</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Verständnis</div>
+                    <div class="option-btn" data-i="2">2) Ausblick</div>
+                    <div class="option-btn" data-i="3">3) Vorstellung</div>
+                    <div class="option-btn" data-i="4">4) Einsicht</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Karten erzählten nicht nur von den neuesten <b>[34]</b> ________, sie wurden der Schlüssel zu Macht und Wohlstand.</div>
+            <div class="question-box" data-correct="2">
+                <span class="question-title">Задание 34</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Geschichten</div>
+                    <div class="option-btn" data-i="2">2) Ereignissen</div>
+                    <div class="option-btn" data-i="3">3) Bauten</div>
+                    <div class="option-btn" data-i="4">4) Büchern</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Seitdem lässt sich die Geschichte der Welt auch als eine Geschichte der Kartografie schreiben. <b>[35]</b> ________ können wir aber bis heute nicht immer zwischen Fakten, Fantasie und Betrug unterscheiden.</div>
+            <div class="question-box" data-correct="3">
+                <span class="question-title">Задание 35</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Dazu</div>
+                    <div class="option-btn" data-i="2">2) Dafür</div>
+                    <div class="option-btn" data-i="3">3) Dabei</div>
+                    <div class="option-btn" data-i="4">4) Darum</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Unsterblich aber wurde eine Karte, die 1513 zum <b>[36]</b> ________ eines arabischen Segelhandbuchs war. Sie spiegelte das große Wissen der muslimischen Welt zur Zeit der Entdeckungen des Kolumbus wider.</div>
+            <div class="question-box" data-correct="1">
+                <span class="question-title">Задание 36</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Bestandteil</div>
+                    <div class="option-btn" data-i="2">2) Gewohnheit</div>
+                    <div class="option-btn" data-i="3">3) Verhängnis</div>
+                    <div class="option-btn" data-i="4">4) Plan</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Sie gibt den Forschern bis heute Rätsel auf. Das knapp 85 mal 60 Zentimeter große Kartenfragment mit arabischen Schriftzeichen zeigt neben der Küstenlinie Westafrikas und dem Zentralatlantik vor <b>[37]</b> ________ die Küsten Nord- und Südamerikas.</div>
+            <div class="question-box" data-correct="4">
+                <span class="question-title">Задание 37</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) weitem</div>
+                    <div class="option-btn" data-i="2">2) kurzem</div>
+                    <div class="option-btn" data-i="3">3) anderem</div>
+                    <div class="option-btn" data-i="4">4) allem</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Die Karte stellt zudem die gesamte Andenkette im Westen Südamerikas dar; dazu ein Tier, einem Lama ähnlich. Die Anden aber hatte bis dahin noch kein Europäer zu sehen bekommen, schon gar nicht Kolumbus. <b>[38]</b> ________ erstaunt, wie detailreich und korrekt der Küstenverlauf im Osten und Süden Südamerikas wiedergegeben ist, einschließlich der Flüsse, vom Orinoko bis zum Rio de la Plata.</div>
+            <div class="question-box" data-correct="1">
+                <span class="question-title">Задание 38</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Dazu</div>
+                    <div class="option-btn" data-i="2">2) Trotzdem</div>
+                    <div class="option-btn" data-i="3">3) Außerdem</div>
+                    <div class="option-btn" data-i="4">4) Dagegen</div>
+                </div>
+            </div>
+        </div>
+        <button class="btn-main" onclick="checkText('text12')">Проверить ответы Текста 12</button>
+        <div class="result-banner" id="res-text12"><h4>Результат Текста 12</h4><div class="score-text" id="score-text12"></div></div>
+        <button class="btn-main btn-next" id="next-text12" onclick="showText('text13')">Перейти к Тексту 13 ➔</button>
+    </div>
+
+    <!-- ================= ТЕКСТ 13 ================= -->
+    <div id="text13" class="text-section">
+        <h3 style="color: #2980b9; margin-bottom: 20px;">Текст 13: Selbstvertrauen</h3>
+        
+        <div class="task-group">
+            <div class="text-box">Ein mangelndes Selbstvertrauen führt zu Unsicherheit, Hemmungen und Selbstzweifeln und ist ein Garant für Misserfolg. Als Selbstvertrauen wird das Vertrauen in die eigenen <b>[32]</b> ________ bezeichnet.</div>
+            <div class="question-box" data-correct="1">
+                <span class="question-title">Задание 32</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Fähigkeiten</div>
+                    <div class="option-btn" data-i="2">2) Vorstellungen</div>
+                    <div class="option-btn" data-i="3">3) Fantasien</div>
+                    <div class="option-btn" data-i="4">4) Schwächen</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Menschen mit hohem Selbstvertrauen glauben, dass sie über die nötigen Ressourcen verfügen, um die vor ihnen liegenden Herausforderungen bewältigen zu können. Menschen mit geringem Selbstvertrauen trauen sich selbst nur wenig zu. Sie sind unsicher und ängstlich und werden von hartnäckigen Selbstzweifeln geplagt. <b>[33]</b> ________ Herausforderungen schrecken sie zurück, weil sie glauben, ihnen nicht gewachsen zu sein.</div>
+            <div class="question-box" data-correct="3">
+                <span class="question-title">Задание 33</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Mit</div>
+                    <div class="option-btn" data-i="2">2) Auf</div>
+                    <div class="option-btn" data-i="3">3) Vor</div>
+                    <div class="option-btn" data-i="4">4) Zu</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Sie sind der Überzeugung, dass sie nicht genug Fähigkeiten haben, <b>[34]</b> ________ mit den Anforderungen der Welt umgehen zu können.</div>
+            <div class="question-box" data-correct="2">
+                <span class="question-title">Задание 34</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) wenn</div>
+                    <div class="option-btn" data-i="2">2) um</div>
+                    <div class="option-btn" data-i="3">3) dazu</div>
+                    <div class="option-btn" data-i="4">4) für</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Genau wie mangelndes Selbstwertgefühl hat auch ein geringes Selbstvertrauen seinen <b>[35]</b> ________ in den Erfahrungen, die wir als Kinder gemacht haben.</div>
+            <div class="question-box" data-correct="4">
+                <span class="question-title">Задание 35</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Beleg</div>
+                    <div class="option-btn" data-i="2">2) Quelle</div>
+                    <div class="option-btn" data-i="3">3) Ruf</div>
+                    <div class="option-btn" data-i="4">4) Ursprung</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Wenn wir keine Erfolgserlebnisse hatten oder Erfolge nicht als solche erkannt haben, wenn unsere Eltern nicht an uns geglaubt haben oder uns stets zurückgehalten haben, konnten wir nicht das nötige Vertrauen in uns selbst gewinnen. Wir konnten nicht die Erfahrung machen, dass wir in der Lage sind, mit Anforderungen umzugehen und Herausforderungen zu bewältigen. Menschen, die über ein hohes Selbstvertrauen verfügen, glauben hingegen, dass sie schlau und einfallsreich genug sind, um z. B. ein bestimmtes Rätsel zu lösen. Ob sie das auch <b>[36]</b> ________ sind, spielt dabei keine wesentliche Rolle.</div>
+            <div class="question-box" data-correct="1">
+                <span class="question-title">Задание 36</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) tatsächlich</div>
+                    <div class="option-btn" data-i="2">2) tatkräftig</div>
+                    <div class="option-btn" data-i="3">3) tatenlos</div>
+                    <div class="option-btn" data-i="4">4) tatverdächtig</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Wichtig ist vor allem ihr Glaube daran. <b>[37]</b> ________ dieser wirkt motivierend.</div>
+            <div class="question-box" data-correct="2">
+                <span class="question-title">Задание 37</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Außerdem</div>
+                    <div class="option-btn" data-i="2">2) Deshalb</div>
+                    <div class="option-btn" data-i="3">3) Denn</div>
+                    <div class="option-btn" data-i="4">4) Trotzdem</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Er führt <b>[38]</b> ________, dass sie die Initiative ergreifen sowie länger und intensiver an ihren Aufgaben arbeiten. Das wiederum garantiert ihnen in vielen Fällen den Erfolg.</div>
+            <div class="question-box" data-correct="2">
+                <span class="question-title">Задание 38</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) danach</div>
+                    <div class="option-btn" data-i="2">2) dafür</div>
+                    <div class="option-btn" data-i="3">3) darin</div>
+                    <div class="option-btn" data-i="4">4) dazu</div>
+                </div>
+            </div>
+        </div>
+        <button class="btn-main" onclick="checkText('text13')">Проверить ответы Текста 13</button>
+        <div class="result-banner" id="res-text13"><h4>Результат Текста 13</h4><div class="score-text" id="score-text13"></div></div>
+        <button class="btn-main btn-next" id="next-text13" onclick="showText('text14')">Перейти к Тексту 14 ➔</button>
+    </div>
+
+    <!-- ================= ТЕКСТ 14 ================= -->
+    <div id="text14" class="text-section">
+        <h3 style="color: #2980b9; margin-bottom: 20px;">Текст 14: 2030 haben wir alle einen Chauffeur</h3>
+        
+        <div class="task-group">
+            <div class="text-box">In einigen Jahren werden wir über den Zwist zwischen Taxigenossenschaften und einem Fahrdienstabieter über den Kopf schütteln. Ein Streit darüber, wer Menschen im Pkw befördern darf. Wie seltsam. Denn schon bald wird jeder, der seinen eigenen Chauffeur <b>[32]</b> ________ will — jederzeit, auf Knopfdruck.</div>
+            <div class="question-box" data-correct="1">
+                <span class="question-title">Задание 32</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) leisten</div>
+                    <div class="option-btn" data-i="2">2) erschaffen</div>
+                    <div class="option-btn" data-i="3">3) verfügen</div>
+                    <div class="option-btn" data-i="4">4) besitzen</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Man muss ihn nur <b>[33]</b> ________ im eigenen Auto „einstellen“. Wir werden nicht mehr fahren, wir werden gefahren.</div>
+            <div class="question-box" data-correct="4">
+                <span class="question-title">Задание 33</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) mitunter</div>
+                    <div class="option-btn" data-i="2">2) zuvor</div>
+                    <div class="option-btn" data-i="3">3) nachher</div>
+                    <div class="option-btn" data-i="4">4) beiseite</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">In unserem Pkw „Um das Jahr 2030 werden wir selbst gesteuerte Autos haben. Sie werden autonom <b>[34]</b> ________ sein und zentral gesteuert, zum Beispiel an Ampeln.</div>
+            <div class="question-box" data-correct="1">
+                <span class="question-title">Задание 34</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) unterwegs</div>
+                    <div class="option-btn" data-i="2">2) vorwärts</div>
+                    <div class="option-btn" data-i="3">3) notfalls</div>
+                    <div class="option-btn" data-i="4">4) eilends</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Dort wird das Fahrzeug von der zentralen Steuerung übernommen und durch die Kreuzung geführt, <b>[35]</b> ________ fährt es autonom weiter“, sagt Gerhard Fettweis, Leiter des Lehrstuhls für Mobile Nachrichtensysteme an der TU Dresden, voraus.</div>
+            <div class="question-box" data-correct="2">
+                <span class="question-title">Задание 35</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) darauf</div>
+                    <div class="option-btn" data-i="2">2) danach</div>
+                    <div class="option-btn" data-i="3">3) dafür</div>
+                    <div class="option-btn" data-i="4">4) dieser</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">„Die verschiedenen Systeme, die Autos steuern, behindern sich nicht. Im <b>[36]</b> ________, sie ergänzen sich.</div>
+            <div class="question-box" data-correct="3">
+                <span class="question-title">Задание 36</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Vorteil</div>
+                    <div class="option-btn" data-i="2">2) Bestandteil</div>
+                    <div class="option-btn" data-i="3">3) Gegenteil</div>
+                    <div class="option-btn" data-i="4">4) Urteil</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Je nach Verkehrssituation greift das eine oder andere. Die Systeme sind vernetzt wie die Autos“, sagt Andreas Festag, der Autoexperte am Lehrstuhl für Mobile Nachrichtensysteme. Diese Autos werden im Straßenverkehr klüger sein als wir. Sie werden schneller reagieren. Und sie werden Situationen <b>[37]</b> ________ und damit Gefahren so früh erkennen, wie es einem Menschen nie möglich sein wird.</div>
+            <div class="question-box" data-correct="4">
+                <span class="question-title">Задание 37</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) kontrollieren</div>
+                    <div class="option-btn" data-i="2">2) verurteilen</div>
+                    <div class="option-btn" data-i="3">3) benoten</div>
+                    <div class="option-btn" data-i="4">4) einschätzen</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Zum Beispiel ein hinter einer Kurve auf den Straßen liegendes Hindernis, dem man ausweichen muss. Die Grundlagen für das „autonome Fahren“ haben Forscher bereits gelegt. Und den entscheidenden Schritt tun dabei weniger die Autoentwickler, <b>[38]</b> ________ die Nachrichtentechniker. Es wird die nächste Generation des drahtlosen Netzes sein, das „taktile Internet“, das Übertragungen in Echtzeit ermöglicht und so das Zeitalter des fahrerlosen Fahrens einläutet.</div>
+            <div class="question-box" data-correct="4">
+                <span class="question-title">Задание 38</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) denn</div>
+                    <div class="option-btn" data-i="2">2) zwar</div>
+                    <div class="option-btn" data-i="3">3) zumal</div>
+                    <div class="option-btn" data-i="4">4) sondern</div>
+                </div>
+            </div>
+        </div>
+        <button class="btn-main" onclick="checkText('text14')">Проверить ответы Текста 14</button>
+        <div class="result-banner" id="res-text14"><h4>Результат Текста 14</h4><div class="score-text" id="score-text14"></div></div>
+        <button class="btn-main btn-next" id="next-text14" onclick="showText('text15')">Перейти к Тексту 15 ➔</button>
+    </div>
+
+    <!-- ================= ТЕКСТ 15 ================= -->
+    <div id="text15" class="text-section">
+        <h3 style="color: #2980b9; margin-bottom: 20px;">Текст 15: Wie unsere innere Uhr tickt</h3>
+        
+        <div class="task-group">
+            <div class="text-box">Ob es Zeit wird, zu schaffen oder zu schlafen, weiß unser Körper auch ohne Wecker. Denn in ihm ticken Milliarden kleiner, biologischer Uhren. Die Nacht zum Tag machen — das ist schwieriger als <b>[32]</b> ________. Reisende spüren das ebenso wie Schichtarbeiter.</div>
+            <div class="question-box" data-correct="1">
+                <span class="question-title">Задание 32</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) gedacht</div>
+                    <div class="option-btn" data-i="2">2) verstanden</div>
+                    <div class="option-btn" data-i="3">3) begriffen</div>
+                    <div class="option-btn" data-i="4">4) bewegt</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Aber auch Menschen, die vor einer Reise schon mal im <b>[33]</b> ________ schlafen wollten, kennen das Problem: Es ist gar nicht so leicht, unseren <b>[34]</b> ________ Rhythmus auszutricksen.</div>
+            <div class="question-box" data-correct="3">
+                <span class="question-title">Задание 33</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Beispiel</div>
+                    <div class="option-btn" data-i="2">2) Vorteil</div>
+                    <div class="option-btn" data-i="3">3) Voraus</div>
+                    <div class="option-btn" data-i="4">4) Gegenzug</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Aber auch Menschen, die vor einer Reise schon mal im <b>[33]</b> ________ schlafen wollten, kennen das Problem: Es ist gar nicht so leicht, unseren <b>[34]</b> ________ Rhythmus auszutricksen.</div>
+            <div class="question-box" data-correct="2">
+                <span class="question-title">Задание 34</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) hinteren</div>
+                    <div class="option-btn" data-i="2">2) inneren</div>
+                    <div class="option-btn" data-i="3">3) vorderen</div>
+                    <div class="option-btn" data-i="4">4) äußeren</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Das liegt an unserer biologischen Uhr: Das körpereigene Taktwerk lässt sich nicht von heute <b>[35]</b> ________ morgen neu einstellen.</div>
+            <div class="question-box" data-correct="4">
+                <span class="question-title">Задание 35</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) für</div>
+                    <div class="option-btn" data-i="2">2) an</div>
+                    <div class="option-btn" data-i="3">3) zu</div>
+                    <div class="option-btn" data-i="4">4) auf</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Die biologische Uhr bestimmt, was unser Körper und unser Gehirn wann machen. Zum Beispiel lässt sie nachts den Blutdruck <b>[36]</b> ________ und den Atem flacher werden. Zugleich gibt sie den Startschuss für die nächtlichen Reparatur- und Erholungsprogramme. Deshalb sind Körper und Geist nachts nur schlecht dazu zu bewegen, zu arbeiten.</div>
+            <div class="question-box" data-correct="3">
+                <span class="question-title">Задание 36</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) stechen</div>
+                    <div class="option-btn" data-i="2">2) senken</div>
+                    <div class="option-btn" data-i="3">3) sinken</div>
+                    <div class="option-btn" data-i="4">4) stinken</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Den absoluten Tiefpunkt erreicht unsere Leistungskurve <b>[37]</b> ________ 3 und 4 Uhr nachts.</div>
+            <div class="question-box" data-correct="4">
+                <span class="question-title">Задание 37</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) während</div>
+                    <div class="option-btn" data-i="2">2) dazwischen</div>
+                    <div class="option-btn" data-i="3">3) außerhalb</div>
+                    <div class="option-btn" data-i="4">4) zwischen</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">Wir sehen nicht gut, können uns kaum konzentrieren, der Kreislauf flattert. Gegen Morgen wendet der Körper sich wieder den Herausforderungen der Außenwelt zu, die Leistungskurve steigt. Von 10 bis 12 Uhr vormittags und gegen 17 Uhr am Nachmittag sind die meisten Menschen am produktivsten. Gegen 14 Uhr fühlen sich <b>[38]</b> ________ ziemlich viele schlapp. Für alle diese Hochs und Tiefs sind biologische Rhythmen verantwortlich: Abläufe im Körper, die sich täglich wiederholen.</div>
+            <div class="question-box" data-correct="1">
+                <span class="question-title">Задание 38</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) hingegen</div>
+                    <div class="option-btn" data-i="2">2) trotzdem</div>
+                    <div class="option-btn" data-i="3">3) außerdem</div>
+                    <div class="option-btn" data-i="4">4) mindestens</div>
+                </div>
+            </div>
+        </div>
+        <button class="btn-main" onclick="checkText('text15')">Проверить ответы Текста 15</button>
+        <div class="result-banner" id="res-text15"><h4>Результат Текста 15</h4><div class="score-text" id="score-text15"></div></div>
         <button class="btn-main btn-next" id="restart-btn" onclick="location.reload()">Пройти тест заново 🔄</button>
     </div>
 
 </div>
 
 <script>
+    // Логика выбора вариантов
     document.querySelectorAll('.question-box').forEach(box => {
         box.querySelectorAll('.option-btn').forEach(btn => {
             btn.addEventListener('click', function() {
@@ -628,6 +1549,7 @@
         });
     });
 
+    // Функция проверки
     function checkText(textId) {
         const container = document.getElementById(textId);
         let score = 0;
@@ -663,6 +1585,7 @@
         document.getElementById('res-' + textId).style.display = 'block';
         document.getElementById('score-' + textId).textContent = score + " / " + total;
 
+        // Логика переключения кнопок
         if (textId === 'text1') {
             document.getElementById('next-text1').style.display = 'block';
             container.querySelector('.btn-main').style.display = 'none';
@@ -675,12 +1598,43 @@
         } else if (textId === 'text4') {
             document.getElementById('next-text4').style.display = 'block';
             container.querySelector('.btn-main').style.display = 'none';
+        } else if (textId === 'text5') {
+            document.getElementById('next-text5').style.display = 'block';
+            container.querySelector('.btn-main').style.display = 'none';
+        } else if (textId === 'text6') {
+            document.getElementById('next-text6').style.display = 'block';
+            container.querySelector('.btn-main').style.display = 'none';
+        } else if (textId === 'text7') {
+            document.getElementById('next-text7').style.display = 'block';
+            container.querySelector('.btn-main').style.display = 'none';
+        } else if (textId === 'text8') {
+            document.getElementById('next-text8').style.display = 'block';
+            container.querySelector('.btn-main').style.display = 'none';
+        } else if (textId === 'text9') {
+            document.getElementById('next-text9').style.display = 'block';
+            container.querySelector('.btn-main').style.display = 'none';
+        } else if (textId === 'text10') {
+            document.getElementById('next-text10').style.display = 'block';
+            container.querySelector('.btn-main').style.display = 'none';
+        } else if (textId === 'text11') {
+            document.getElementById('next-text11').style.display = 'block';
+            container.querySelector('.btn-main').style.display = 'none';
+        } else if (textId === 'text12') {
+            document.getElementById('next-text12').style.display = 'block';
+            container.querySelector('.btn-main').style.display = 'none';
+        } else if (textId === 'text13') {
+            document.getElementById('next-text13').style.display = 'block';
+            container.querySelector('.btn-main').style.display = 'none';
+        } else if (textId === 'text14') {
+            document.getElementById('next-text14').style.display = 'block';
+            container.querySelector('.btn-main').style.display = 'none';
         } else {
             document.getElementById('restart-btn').style.display = 'block';
             container.querySelector('.btn-main').style.display = 'none';
         }
     }
 
+    // Функция переключения текстов
     function showText(id) {
         document.querySelectorAll('.text-section').forEach(sec => sec.classList.remove('active'));
         document.getElementById(id).classList.add('active');
