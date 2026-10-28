@@ -8,7 +8,7 @@
         /* Базовые настройки страницы */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #ffffff; /* Белый фон, как на скриншоте */
+            background-color: #ffffff;
             color: #2c3e50;
             line-height: 1.6;
             margin: 0;
@@ -33,49 +33,47 @@
            СТИЛИ ДЛЯ КАЖДОГО ЗАДАНИЯ (КАК НА СКРИНШОТЕ)
            ========================================= */
         
-        /* Группирующий контейнер для одного задания (текст + варианты) */
         .task-group {
-            margin-bottom: 35px; /* Отступ между заданиями */
+            margin-bottom: 35px;
         }
 
-        /* Блок с текстом (светло-серый фон, синяя полоса слева) */
+        /* Блок с текстом */
         .text-box {
-            background-color: #f8f9fa; /* Очень светлый серый */
-            border-left: 6px solid #3498db; /* Яркая синяя полоса */
+            background-color: #f8f9fa;
+            border-left: 6px solid #3498db;
             padding: 20px 25px;
             margin-bottom: 20px;
-            border-radius: 4px; /* Легкое скругление */
+            border-radius: 4px;
             font-size: 16px;
             color: #333;
         }
 
-        /* Блок с самим заданием и вариантами */
+        /* Блок с заданием */
         .question-box {
-            border: 1px solid #e1e8ed; /* Тонкая рамка вокруг вопроса, как на скрине */
+            border: 1px solid #e1e8ed;
             border-radius: 8px;
             padding: 20px 25px;
             background-color: #ffffff;
         }
 
-        /* Заголовок "Задание 30" */
         .question-title {
             font-weight: 700;
             font-size: 18px;
-            color: #2c3e50; /* Темно-синий/серый */
+            color: #2c3e50;
             margin-bottom: 15px;
             display: block;
         }
 
-        /* Сетка для вариантов ответов (две колонки) */
+        /* Сетка для вариантов ответов */
         .options-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 12px; /* Расстояние между кнопками */
+            gap: 12px;
         }
 
         /* Кнопка варианта ответа */
         .option-btn {
-            background-color: #f0f2f5; /* Светло-серый фон кнопки */
+            background-color: #f0f2f5;
             padding: 12px 18px;
             border-radius: 8px;
             cursor: pointer;
@@ -83,40 +81,37 @@
             color: #2c3e50;
             user-select: none;
             transition: background 0.2s, transform 0.1s;
-            border: 2px solid transparent; /* Резерв под рамку для выделения */
+            border: 2px solid transparent;
         }
 
-        /* Наведение мышки */
         .option-btn:hover {
             background-color: #e2e6ea;
         }
 
-        /* Выбранный вариант (до проверки) */
         .option-btn.selected {
-            background-color: #d5dbdb; /* Чуть темнее */
+            background-color: #d5dbdb;
             border-color: #bdc3c7;
         }
 
-        /* Правильный ответ (после проверки) */
+        /* Правильный ответ */
         .option-btn.correct {
             background-color: #d4edda !important;
             border-color: #28a745 !important;
             color: #155724;
         }
 
-        /* Неправильный ответ (после проверки) */
+        /* Неправильный ответ */
         .option-btn.wrong {
             background-color: #f8d7da !important;
             border-color: #dc3545 !important;
             color: #721c24;
         }
 
-        /* Блокировка кликов */
         .option-btn.disabled {
             pointer-events: none;
         }
 
-        /* Кнопки "Проверить" и "Далее" */
+        /* Кнопки управления */
         .btn-main {
             display: block;
             width: 100%;
@@ -143,7 +138,7 @@
             background: #219653;
         }
 
-        /* Баннер с результатом */
+        /* Результаты */
         .result-banner {
             display: none;
             text-align: center;
@@ -165,7 +160,6 @@
             margin-top: 10px;
         }
 
-        /* Адаптация для телефонов */
         @media (max-width: 600px) {
             .options-grid { grid-template-columns: 1fr; }
             .text-box, .question-box { padding: 15px; }
@@ -229,12 +223,12 @@
             </div>
         </div>
 
-        <!-- Задание 33 -->
+        <!-- Задание 33 (ИСПРАВЛЕНО НА 1) -->
         <div class="task-group">
             <div class="text-box">
                 Die erste Version der „Kerze“ brannte etwa eine Stunde lang. Der Wissenschaftler verdoppelte diese Zeit. Während seines Militärdienstes studierte Jablotschkow das Gebiet, das ihn begeisterte – die Elektrizität. Das konservative militärische <b>[33]</b> ________ tolerierte solche Experimente nicht und Jablotschkow wurde Elektroingenieur.
             </div>
-            <div class="question-box" data-correct="3">
+            <div class="question-box" data-correct="1">
                 <span class="question-title">Задание 33</span>
                 <div class="options-grid">
                     <div class="option-btn" data-i="1">1) Umfeld</div>
@@ -436,9 +430,7 @@
         box.querySelectorAll('.option-btn').forEach(btn => {
             btn.addEventListener('click', function() {
                 if (this.classList.contains('disabled')) return;
-                // Убираем выделение с других кнопок в этом же вопросе
                 box.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
-                // Выделяем нажатую
                 this.classList.add('selected');
             });
         });
@@ -461,7 +453,6 @@
                 return; 
             }
 
-            // Блокируем клики
             box.querySelectorAll('.option-btn').forEach(b => b.classList.add('disabled'));
 
             if (selected.getAttribute('data-i') === correct) {
@@ -469,7 +460,6 @@
                 score++;
             } else {
                 selected.classList.add('wrong');
-                // Подсвечиваем правильный ответ
                 box.querySelector(`.option-btn[data-i="${correct}"]`).classList.add('correct');
             }
         });
@@ -479,11 +469,9 @@
             return;
         }
 
-        // Показываем результат
         document.getElementById('res-' + textId).style.display = 'block';
         document.getElementById('score-' + textId).textContent = score + " / " + total;
 
-        // Переключаем кнопки
         if (textId === 'text1') {
             document.getElementById('next-text1').style.display = 'block';
             container.querySelector('.btn-main').style.display = 'none';
