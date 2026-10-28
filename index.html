@@ -1,3 +1,12 @@
+Отлично! Спасибо за ключи. Теперь всё встало на свои места. 
+
+Я добавил этот текст как **Текст 5**. Я сохранил ту нумерацию заданий, которая указана в самом тексте на картинке — **с 32 по 38**, чтобы всё соответствовало оригинальному бланку ЕГЭ.
+
+Обратите внимание на задание **34** и **36**: на вашей картинке с текстом в вариантах ответа к 34 заданию напечатаны глаголы (einstellt, eingeführt...), но по ключам правильный ответ — **2**. В контексте *«in den Klassen eins bis [34]»* правильным словом является *vier* (классы с первого по четвертый). Я подписал вариант 2 как «2) vier» (и в 36 задании аналогично — «2) befanden»), чтобы тест работал корректно по вашим ключам.
+
+Вот полный обновленный код с **5 текстами**. Скопируйте его и замените свой файл `index.html`:
+
+```html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -29,10 +38,7 @@
             display: block;
         }
 
-        /* =========================================
-           СТИЛИ ДЛЯ КАЖДОГО ЗАДАНИЯ (КАК НА СКРИНШОТЕ)
-           ========================================= */
-        
+        /* Стили для каждого задания */
         .task-group {
             margin-bottom: 35px;
         }
@@ -175,7 +181,6 @@
     <div id="text1" class="text-section active">
         <h3 style="color: #2980b9; margin-bottom: 20px;">Текст 1: Wie ein russischer Erfinder Europa erstrahlen ließ</h3>
         
-        <!-- Задание 30 -->
         <div class="task-group">
             <div class="text-box">
                 Pawel Jablotschkow kann mit Recht den Erfindern der ersten elektrischen Beleuchtung <b>[30]</b> ________ werden. Er war es, der ersten elektrischen Lichts in die Straßen Europas und später in russische Städte brachte.
@@ -190,8 +195,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Задание 31 -->
         <div class="task-group">
             <div class="text-box">
                 Den <b>[31]</b> ________ „Jablotschkowsche Kerzen“ kannte Ende des 19. Jahrhunderts jeder Mensch, der sich für Technik interessierte.
@@ -206,8 +209,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Задание 32 -->
         <div class="task-group">
             <div class="text-box">
                 Die Erfindung des russischen Wissenschaftlers <b>[32]</b> ________ alle Seine so genannten „Kerzen“ zogen in den ersten zwei Jahren nach ihrer Erfindung in alle großen Städte der Welt ein.
@@ -222,8 +223,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Задание 33 (ИСПРАВЛЕНО НА 1) -->
         <div class="task-group">
             <div class="text-box">
                 Die erste Version der „Kerze“ brannte etwa eine Stunde lang. Der Wissenschaftler verdoppelte diese Zeit. Während seines Militärdienstes studierte Jablotschkow das Gebiet, das ihn begeisterte – die Elektrizität. Das konservative militärische <b>[33]</b> ________ tolerierte solche Experimente nicht und Jablotschkow wurde Elektroingenieur.
@@ -238,8 +237,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Задание 34 -->
         <div class="task-group">
             <div class="text-box">
                 In seinem Freund fand er einen Gleichgesinnten und eröffnete eine Werkstatt in Moskau. Die Freunde wollten mit der Herstellung von elektrischen Geräten ein Geschäft <b>[34]</b> ________.
@@ -254,8 +251,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Задание 35 -->
         <div class="task-group">
             <div class="text-box">
                 Nebenbei setzte Jablotschkow seine Experimente <b>[35]</b> ________. Das Geschäft der beiden Freunde jedoch entwickelte sich schleppend.
@@ -270,8 +265,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Задание 36 -->
         <div class="task-group">
             <div class="text-box">
                 Der Wissenschaftler war zu sehr mit Experimenten beschäftigt und nicht mit dem Verkauf. Die Werkstatt ging in Konkurs. Um sein Geschäft vor <b>[36]</b> ________ zu retten, versuchte Jablotschkow in Amerika für seine Erfindungen zu werben. Allerdings reichten die Mittel nur für Paris.
@@ -287,7 +280,6 @@
             </div>
         </div>
 
-        <!-- Кнопки для Текста 1 -->
         <button class="btn-main" onclick="checkText('text1')">Проверить ответы Текста 1</button>
         <div class="result-banner" id="res-text1">
             <h4>Результат Текста 1</h4>
@@ -301,7 +293,6 @@
     <div id="text2" class="text-section">
         <h3 style="color: #2980b9; margin-bottom: 20px;">Текст 2: Ist E-Sport wirklich ein Sport?</h3>
         
-        <!-- Задание 30 -->
         <div class="task-group">
             <div class="text-box">
                 Habt ihr schon mal was von E-Sport gehört? Viele junge Menschen betreiben diesen Sport mittlerweile als richtigen Beruf. E-Sport soll sogar nach jahrelangen Diskussionen bald als offizielle Sportart <b>[30]</b> ________ werden, die Bundesregierung hat das sogar als Ziel im Koalitionsvertrag festgelegt.
@@ -316,8 +307,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Задание 31 -->
         <div class="task-group">
             <div class="text-box">
                 FIFA, League of Legends und Starcraft. Von diesen Games hast du bestimmt schon mal gehört oder vielleicht hast du sie selbst schon gespielt. Es gibt aber auch junge Menschen, die diese Spiele professionell über mehrere Stunden am Tag spielen, ob an der Konsole oder am Computer. Das Ganze wird E-Sport genannt und <b>[31]</b> ________ abgekürzt für elektronischen Sport.
@@ -332,8 +321,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Задание 32 -->
         <div class="task-group">
             <div class="text-box">
                 E-Sport ist in den letzten Jahren so stark gewachsen, dass richtige <b>[32]</b> ________ entstanden sind.
@@ -348,8 +335,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Задание 33 -->
         <div class="task-group">
             <div class="text-box">
                 Die treten dann in großen Turnieren <b>[33]</b> ________ an. Wenn man erfolgreich ist, kann man mehrere Millionen Euro gewinnen.
@@ -364,8 +349,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Задание 34 -->
         <div class="task-group">
             <div class="text-box">
                 Man muss also nur schnell ein paar Knöpfe drücken und prompt ist man Millionär. So einfach ist das dann doch nicht. Ähnlich wie bei Leistungssportlern, braucht man auch hier viel Talent und Glück. Nur die wenigsten <b>[34]</b> ________ es, als E-Sportler Geld zu verdienen.
@@ -380,8 +363,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Задание 35 -->
         <div class="task-group">
             <div class="text-box">
                 Sie sind wöchentlich auf vielen verschiedenen Veranstaltungen unterwegs, wenn sie nicht gerade trainieren. Neben den Veranstaltungen kommen zahlreiche Wettbewerbe auf der ganzen Welt hinzu. Der Druck ist <b>[35]</b> ________, weil das Zuschauerinteresse immer größer wird.
@@ -396,8 +377,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Задание 36 -->
         <div class="task-group">
             <div class="text-box">
                 Große Turniere werden schon im Fernsehen <b>[36]</b> ________.
@@ -413,81 +392,244 @@
             </div>
         </div>
 
-        <!-- Кнопки для Текста 2 -->
         <button class="btn-main" onclick="checkText('text2')">Проверить ответы Текста 2</button>
         <div class="result-banner" id="res-text2">
             <h4>Результат Текста 2</h4>
             <div class="score-text" id="score-text2"></div>
         </div>
-        <button class="btn-main btn-next" id="restart-btn" onclick="location.reload()">Пройти тест заново 🔄</button>
+        <button class="btn-main btn-next" id="next-text2" onclick="showText('text3')">Перейти к Тексту 3 ➔</button>
     </div>
 
-</div>
+    <!-- ================= ТЕКСТ 3 ================= -->
+    <div id="text3" class="text-section">
+        <h3 style="color: #2980b9; margin-bottom: 20px;">Текст 3: Städte der Zukunft</h3>
+        
+        <div class="task-group">
+            <div class="text-box">
+                Immer mehr Menschen weltweit wollen in der Stadt leben. Und weil alle eine Wohnung brauchen, aber der Platz <b>[30]</b> ________ ist, liegt es nahe, in die Höhe zu bauen. In Hochhäusern kann man viele Menschen auf wenig Platz unterbringen. Wenn aber einfach Hochhaus an Hochhaus steht, wird die Umgebung trist und die Menschen fühlen sich nicht mehr wohl. Sie brauchen grüne Flächen und Natur in der Stadt.
+            </div>
+            <div class="question-box" data-correct="1">
+                <span class="question-title">Задание 30</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) begrenzt</div>
+                    <div class="option-btn" data-i="2">2) verlegt</div>
+                    <div class="option-btn" data-i="3">3) verbunden</div>
+                    <div class="option-btn" data-i="4">4) befohlen</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">
+                Durch den Klimawandel kommt es immer <b>[31]</b> ________ zu starken Regenfällen und großer Hitze im Sommer.
+            </div>
+            <div class="question-box" data-correct="2">
+                <span class="question-title">Задание 31</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) heimlicher</div>
+                    <div class="option-btn" data-i="2">2) häufiger</div>
+                    <div class="option-btn" data-i="3">3) hartnäckiger</div>
+                    <div class="option-btn" data-i="4">4) heftiger</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">
+                Auch deshalb müssen die Städte der Zukunft grün sein: In Parks kann viel Wasser versickern; Bäume und bepflanzte Fassaden <b>[32]</b> ________ Schatten. Was den Verkehr angeht, sind fliegende Autos keine gute Idee, denn alles, was fliegt, braucht viel Energie und die gilt es, in Zukunft zu sparen.
+            </div>
+            <div class="question-box" data-correct="1">
+                <span class="question-title">Задание 32</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) spenden</div>
+                    <div class="option-btn" data-i="2">2) erscheinen</div>
+                    <div class="option-btn" data-i="3">3) liegen</div>
+                    <div class="option-btn" data-i="4">4) folgen</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">
+                Vorstellbar sind kleine Flugdrohnen, mit denen Pakete geliefert werden. Einige Unternehmen forschen auch an Hubschrauber-Taxis. Das werden sich aber nur reiche Leute leisten können. Wichtiger ist es, Staus in Zukunft zu <b>[33]</b> ________, damit alle Menschen schnell ans Ziel kommen.
+            </div>
+            <div class="question-box" data-correct="3">
+                <span class="question-title">Задание 33</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) verbrauchen</div>
+                    <div class="option-btn" data-i="2">2) verlangen</div>
+                    <div class="option-btn" data-i="3">3) vermeiden</div>
+                    <div class="option-btn" data-i="4">4) verwenden</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">
+                Dazu ist nicht mehr Technik nötig, sondern weniger: Viele Stadtplaner <b>[34]</b> ________ nicht auf Autos, sondern auf Radfahren und Zufußgehen.
+            </div>
+            <div class="question-box" data-correct="1">
+                <span class="question-title">Задание 34</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) setzen</div>
+                    <div class="option-btn" data-i="2">2) legen</div>
+                    <div class="option-btn" data-i="3">3) stellen</div>
+                    <div class="option-btn" data-i="4">4) hängen</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">
+                Für längere <b>[35]</b> ________ gibt es Busse und Bahnen, die mit klimafreundlichen Elektro- oder Wasserstoffantrieben fahren.
+            </div>
+            <div class="question-box" data-correct="3">
+                <span class="question-title">Задание 35</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Schlüssel</div>
+                    <div class="option-btn" data-i="2">2) Schale</div>
+                    <div class="option-btn" data-i="3">3) Strecken</div>
+                    <div class="option-btn" data-i="4">4) Schulen</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">
+                Dazu kann man sich an vielen Orten günstig Elektroroller und Elektroautos leihen. In einer solchen Stadt wäre es leiser, die Luft wäre besser und die Menschen lebten gesünder. Das sind doch gute <b>[36]</b> ________!
+            </div>
+            <div class="question-box" data-correct="4">
+                <span class="question-title">Задание 36</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Ausgaben</div>
+                    <div class="option-btn" data-i="2">2) Auskünfte</div>
+                    <div class="option-btn" data-i="3">3) Aussagen</div>
+                    <div class="option-btn" data-i="4">4) Aussichten</div>
+                </div>
+            </div>
+        </div>
 
-<script>
-    // Логика выбора вариантов
-    document.querySelectorAll('.question-box').forEach(box => {
-        box.querySelectorAll('.option-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                if (this.classList.contains('disabled')) return;
-                box.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
-                this.classList.add('selected');
-            });
-        });
-    });
+        <button class="btn-main" onclick="checkText('text3')">Проверить ответы Текста 3</button>
+        <div class="result-banner" id="res-text3">
+            <h4>Результат Текста 3</h4>
+            <div class="score-text" id="score-text3"></div>
+        </div>
+        <button class="btn-main btn-next" id="next-text3" onclick="showText('text4')">Перейти к Тексту 4 ➔</button>
+    </div>
 
-    // Функция проверки
-    function checkText(textId) {
-        const container = document.getElementById(textId);
-        let score = 0;
-        let total = 0;
-        let allAnswered = true;
+    <!-- ================= ТЕКСТ 4 ================= -->
+    <div id="text4" class="text-section">
+        <h3 style="color: #2980b9; margin-bottom: 20px;">Текст 4: Informieren – Orientieren – Ausprobieren</h3>
+        
+        <div class="task-group">
+            <div class="text-box">
+                Einen intensiven Einblick in den Campusalltag bieten Schnupperstudium und Orientierungssemester. Ein Schnupperstudium dauert je nach Hochschule einen Tag oder eine Woche. Schüler und Schülerinnen können dabei reguläre Vorlesungen live <b>[30]</b> ________.
+            </div>
+            <div class="question-box" data-correct="1">
+                <span class="question-title">Задание 30</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) erleben</div>
+                    <div class="option-btn" data-i="2">2) beleben</div>
+                    <div class="option-btn" data-i="3">3) ableben</div>
+                    <div class="option-btn" data-i="4">4) überleben</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">
+                In Form eines ganzen Orientierungssemesters oder -jahres bieten Hochschulen nicht zuletzt die Option, tiefer in ein oder mehrere Fächer einzutauchen, um so am Ende eine fundierte Entscheidung <b>[31]</b> ________ zu können.
+            </div>
+            <div class="question-box" data-correct="4">
+                <span class="question-title">Задание 31</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) nehmen</div>
+                    <div class="option-btn" data-i="2">2) fassen</div>
+                    <div class="option-btn" data-i="3">3) fallen</div>
+                    <div class="option-btn" data-i="4">4) treffen</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">
+                Bei <b>[32]</b> ________ kann man sich die erworbenen Credit Points für das anschließende Studium anrechnen lassen.
+            </div>
+            <div class="question-box" data-correct="4">
+                <span class="question-title">Задание 32</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Not</div>
+                    <div class="option-btn" data-i="2">2) Lust</div>
+                    <div class="option-btn" data-i="3">3) Elend</div>
+                    <div class="option-btn" data-i="4">4) Bedarf</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">
+                Ein Beispiel für ein solches Orientierungsstudium ist etwa „openMINT“ der Hochschule Zwickau. Dabei können die Studierenden zwei Semester lang die einbezogenen MINT-Studiengänge kennenlernen. „OrientierungMINT“ der Hochschule Anhalt richtet sich <b>[33]</b> ________ an junge Frauen, die damit testen können, welches MINT-Studienfach am besten zu ihnen passt.
+            </div>
+            <div class="question-box" data-correct="3">
+                <span class="question-title">Задание 33</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) gerechnet</div>
+                    <div class="option-btn" data-i="2">2) gezählt</div>
+                    <div class="option-btn" data-i="3">3) gezielt</div>
+                    <div class="option-btn" data-i="4">4) gezahlt</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">
+                Die Uni Witten/Herdecke bietet Studieninteressierten ein Orientierungsstudium in den <b>[34]</b> ________ Philosophie, Kunst, Kultur- und Sozialwissenschaften an – allerdings kostenpflichtig.
+            </div>
+            <div class="question-box" data-correct="4">
+                <span class="question-title">Задание 34</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Einrichtungen</div>
+                    <div class="option-btn" data-i="2">2) Gebieten</div>
+                    <div class="option-btn" data-i="3">3) Vereinbarungen</div>
+                    <div class="option-btn" data-i="4">4) Bereichen</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">
+                <b>[35]</b> ________ Schüler und Schülerinnen haben so schon vor dem Abitur die Möglichkeit, sich an der Universität auszuprobieren.
+            </div>
+            <div class="question-box" data-correct="4">
+                <span class="question-title">Задание 35</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) Böswillige</div>
+                    <div class="option-btn" data-i="2">2) Naturechte</div>
+                    <div class="option-btn" data-i="3">3) Heftige</div>
+                    <div class="option-btn" data-i="4">4) Leistungsstarke</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-group">
+            <div class="text-box">
+                Dafür werden sie von der Schule <b>[36]</b> ________ und besuchen Vorlesungen, Seminare und Übungen. Die SchülerInnen können sogar Prüfungen ablegen und sich diese für ihr späteres Studium anrechnen lassen.
+            </div>
+            <div class="question-box" data-correct="3">
+                <span class="question-title">Задание 36</span>
+                <div class="options-grid">
+                    <div class="option-btn" data-i="1">1) bewusst</div>
+                    <div class="option-btn" data-i="2">2) bereit</div>
+                    <div class="option-btn" data-i="3">3) befreit</div>
+                    <div class="option-btn" data-i="4">4) abhängig</div>
+                </div>
+            </div>
+        </div>
 
-        container.querySelectorAll('.question-box').forEach(box => {
-            total++;
-            const correct = box.getAttribute('data-correct');
-            const selected = box.querySelector('.option-btn.selected');
+        <button class="btn-main" onclick="checkText('text4')">Проверить ответы Текста 4</button>
+        <div class="result-banner" id="res-text4">
+            <h4>Результат Текста 4</h4>
+            <div class="score-text" id="score-text4"></div>
+        </div>
+        <button class="btn-main btn-next" id="next-text4" onclick="showText('text5')">Перейти к Тексту 5 ➔</button>
+    </div>
 
-            if (!selected) {
-                allAnswered = false;
-                return; 
-            }
-
-            box.querySelectorAll('.option-btn').forEach(b => b.classList.add('disabled'));
-
-            if (selected.getAttribute('data-i') === correct) {
-                selected.classList.add('correct');
-                score++;
-            } else {
-                selected.classList.add('wrong');
-                box.querySelector(`.option-btn[data-i="${correct}"]`).classList.add('correct');
-            }
-        });
-
-        if (!allAnswered) {
-            alert("Пожалуйста, ответьте на все вопросы в этом тексте!");
-            return;
-        }
-
-        document.getElementById('res-' + textId).style.display = 'block';
-        document.getElementById('score-' + textId).textContent = score + " / " + total;
-
-        if (textId === 'text1') {
-            document.getElementById('next-text1').style.display = 'block';
-            container.querySelector('.btn-main').style.display = 'none';
-        } else {
-            document.getElementById('restart-btn').style.display = 'block';
-            container.querySelector('.btn-main').style.display = 'none';
-        }
-    }
-
-    // Переключение текстов
-    function showText(id) {
-        document.querySelectorAll('.text-section').forEach(sec => sec.classList.remove('active'));
-        document.getElementById(id).classList.add('active');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-</script>
-
-</body>
-</html>
+    <!-- ================= ТЕКСТ 5 (НОВЫЙ) ================= -->
+    <div id="text5" class="text-section">
+        <h3 style="color: #2980b9; margin-bottom: 20px;">Текст 5: Indische Schüler haben jetzt Glück als Schulfach</h3>
+        
+        <!-- Задание 32 -->
+        <div class="task-group">
+            <div class="text-box">
+                Die Schülerinnen und Schüler in der indischen Hauptstadt Neu Delhi werden bald ein neues Schulfach besuchen. Einmal pro Tag steht auf den Stundenplänen nun das Thema Glück. In einer 45-minütigen Stunde werden die Kinder meditieren, spielen und verschiedene Aspekte diskutieren, die zum Thema „Glück“ <b>[32]</b> ________.
+            </div>
+            <div class="question-box" data-correct="4">
+                <span class="question-title">Задание 32</
